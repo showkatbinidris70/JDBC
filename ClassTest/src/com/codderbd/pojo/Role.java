@@ -1,7 +1,15 @@
-package com.coderbd.pojo;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.codderbd.pojo;
 
+/**
+ *
+ * @author User
+ */
 public class Role {
-
     private int id;
     private String roleName;
 
@@ -42,4 +50,6 @@ public class Role {
         return "Role{" + "id=" + id + ", roleName=" + roleName + '}';
     }
 
+    
+    
 }
