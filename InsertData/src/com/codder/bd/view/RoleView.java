@@ -7,6 +7,7 @@ package com.codder.bd.view;
 
 import com.codder.bd.dao.RoleDao;
 import com.codder.bd.daoImp.RoleDaoImp;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -119,10 +120,33 @@ public class RoleView extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        RoleDao role = new RoleDaoImp();
+        RoleDao roleDao = new RoleDaoImp();
         int id = Integer.parseInt(jTextField1.getText().trim());
-        String roleName = jTextField2.getText();
+        String roleName = jTextField2.getText().trim();
+        if (String.valueOf(id).length() < 3) {
+            JOptionPane.showMessageDialog(null, "Id should be atleast 3 characters!");
+        } else if (name.length() < 4) {
+            JOptionPane.showMessageDialog(null, "Name should be atleast 4 characters!");
+        } else {
+            try {
+                Role existRole = role.getRoleById(id);
+                if (existRole != null) {
+                    JOptionPane.showMessageDialog(null, "Such type of ID Already exists!");
+                } else {
+                    Role roles = new Role(id, name);
+                    role.insert(roles);
+                    displayDataToTable();
+                    JOptionPane.showMessageDialog(null, "Data inserted Successfully!");
+                }
+            } catch (Exception e) {
+                Role roles = new Role(id, name);
+                role.insert(roles);
+                displayDataToTable();
+                JOptionPane.showMessageDialog(null, "Data inserted Successfully!");
 
+
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

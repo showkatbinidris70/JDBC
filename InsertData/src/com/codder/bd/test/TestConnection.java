@@ -16,6 +16,6 @@ import com.codder.bd.conn.CustomDBConnection;
 public class TestConnection {
  
     public static void main(String[] args) {
-        CustomDBConnection.getConnection();
+        CustomDBConnection.getConnect();
     }
 }

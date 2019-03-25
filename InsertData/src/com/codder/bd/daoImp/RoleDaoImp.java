@@ -33,8 +33,8 @@ public class RoleDaoImp implements RoleDao{
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.execute();
             System.out.println("student table created successfully");
-        } catch (SQLException ex) {
-            Logger.getLogger(RoleDaoImp.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
     }
 

@@ -31,38 +31,31 @@ smoothly and digitally. Also I want . I want a software, where the following thi
 			(iii)Contract
 			
 		C.Buying product 
-		(i)Cotton
+		
+		(i)Thread
 				a.Price
-				b.Quality
-				c.Quantity
-				d.Buying data
-				e.Import Country
-				f.Expired date
-				g.color.
-		(ii)Thread
-				a.Price
-				b.Quality
+				
 				c.Quantity
 				d.Buying data
 				e.Import Country
 				f.Expired date
 				g.color.				
-		(iii)Dye
+		(ii)Dye
 				a.Price
-				b.Quality
+				
 				c.Quantity
 				d.Buying data
 				e.Import Country
 				f.Expired date
 				g.color.
-		(iv)Camecal
-					a.Price
-				b.Quality
+		(iii)Camecal
+				a.Price
+				
 				c.Quantity
 				d.Buying data
 				e.Import Country
 				f.Expired date
-				g.color.
+				
 	
 	3. Knitting Section: There is a knitting section in my mill. And there are some workers.
 	   I need to calculate how much workers are working there.
