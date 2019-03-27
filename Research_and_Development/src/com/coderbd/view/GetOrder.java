@@ -45,6 +45,7 @@ public class GetOrder extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Research & Development (RND) Department");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
