@@ -13,11 +13,11 @@ import java.util.List;
  *
  * @author User
  */
-public class GetOrderDaoImpl implements GetOrderDao1{
+public class GetOrderDao1Impl implements GetOrderDao1{
 
     @Override
     public void ctreateTable() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
