@@ -21,7 +21,7 @@ public class ProductBDConnection {
     public static Connection getConnection() {
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/showkat", "root", "1234");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rnd", "root", "1234");
             System.out.println("JDBC Connected");
         } catch (SQLException ex) {
             Logger.getLogger(ProductBDConnection.class.getName()).log(Level.SEVERE, null, ex);

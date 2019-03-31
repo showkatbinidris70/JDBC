@@ -24,7 +24,11 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public void createTable() {
-        String sql = "create table IF NOT EXISTS product(id int(11) auto_increment primary key, product_name varchar(50),product_code varchar(30),qty int(11),unit_price double,total_price double, purchase_date date, p_cat_id int(5),FOREIGN KEY (p_cat_id) REFERENCES product_category(id))";
+        String sql = "create table IF NOT EXISTS product(id int(11) "
+                + "auto_increment primary key, product_name varchar(50),"
+                + "product_code varchar(30),qty int(11),unit_price double,"
+                + "total_price double, purchase_date date, p_cat_id int(5),"
+                + "FOREIGN KEY (p_cat_id) REFERENCES product_category(id))";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.execute();
