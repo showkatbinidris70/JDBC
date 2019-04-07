@@ -20,11 +20,8 @@ public class ProductPurchaseView extends javax.swing.JFrame {
     public ProductPurchaseView() {
         initComponents();
         displayRoleListIntoTable();
-             
-        
-    }
 
-  
+    }
 
     public void displayRoleListIntoTable() {
         clearTable();
@@ -219,7 +216,7 @@ public class ProductPurchaseView extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         ProductDao productDao = new ProductDaoImpl();
-     
+
         LocalDate todayLocalDate = LocalDate.now(ZoneId.of("America/Montreal"));
         java.sql.Date sqlDate = java.sql.Date.valueOf(todayLocalDate);
         Product product = new Product(txtProName.getText().trim(), txtProCode.getText().trim(),

@@ -25,7 +25,7 @@ public class CustomDBConnection {
    
     public static Connection getDBConnection() {
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/salesmgmt", "root", "1234");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/showkat", "root", "1234");
             System.out.println("Connected");
             return conn;
         } catch (SQLException ex) {
