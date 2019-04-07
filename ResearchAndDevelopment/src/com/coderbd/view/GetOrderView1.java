@@ -25,10 +25,12 @@ public class GetOrderView1 extends javax.swing.JFrame {
         initComponents();
         displayIntoTable();
     }
-public void clearTable() {
-     DefaultTableModel model = (DefaultTableModel) tblDisplayOrder.getModel();
-     model.setRowCount(0);
-}
+
+    public void clearTable() {
+        DefaultTableModel model = (DefaultTableModel) tblDisplayOrder.getModel();
+        model.setRowCount(0);
+    }
+
     public void displayIntoTable() {
         clearTable();
         GetOrderDao1 dao = new GetOrderDao1Impl();
@@ -77,6 +79,7 @@ public void clearTable() {
         btnSubmitOrder = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         btnUpdateOrder = new javax.swing.JButton();
+        btnUpdateOrder1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 0, 0));
@@ -86,7 +89,7 @@ public void clearTable() {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel1.setText("                       Research & Development (RND) Department                                           1");
+        jLabel1.setText("                       Research & Development (RND) Department                                    1");
 
         tblDisplayOrder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -148,6 +151,15 @@ public void clearTable() {
             }
         });
 
+        btnUpdateOrder1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnUpdateOrder1.setForeground(new java.awt.Color(0, 102, 102));
+        btnUpdateOrder1.setText("Exit");
+        btnUpdateOrder1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateOrder1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -190,12 +202,16 @@ public void clearTable() {
                         .addComponent(btnSubmitOrder)
                         .addGap(49, 49, 49)
                         .addComponent(btnUpdateOrder)))
-                .addGap(43, 43, 43)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(224, 224, 224)
+                .addComponent(btnUpdateOrder1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,6 +222,7 @@ public void clearTable() {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -233,9 +250,10 @@ public void clearTable() {
                         .addGap(71, 71, 71)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnSubmitOrder)
-                            .addComponent(btnUpdateOrder)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnUpdateOrder))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(btnUpdateOrder1)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -244,9 +262,10 @@ public void clearTable() {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 992, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,6 +289,12 @@ public void clearTable() {
     private void btnUpdateOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateOrderActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUpdateOrderActionPerformed
+
+    private void btnUpdateOrder1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateOrder1ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+        
+    }//GEN-LAST:event_btnUpdateOrder1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -312,6 +337,7 @@ public void clearTable() {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSubmitOrder;
     private javax.swing.JButton btnUpdateOrder;
+    private javax.swing.JButton btnUpdateOrder1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

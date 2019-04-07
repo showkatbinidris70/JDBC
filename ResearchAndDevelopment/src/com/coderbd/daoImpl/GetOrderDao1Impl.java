@@ -105,7 +105,7 @@ public class GetOrderDao1Impl implements GetOrderDao1 {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                GetOrder1 go = new GetOrder1(rs.getInt(1),rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getDate(6), rs.getDate(7));
+                GetOrder1 go = new GetOrder1(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getDate(6), rs.getDate(7));
                 list.add(go);
             }
         } catch (SQLException ex) {

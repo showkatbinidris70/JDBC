@@ -17,34 +17,34 @@ public class BuyingThread2 {
     private int id;
     private String threadName;
     private int threadQuantity;
+     private String threadColor;
     private double unitPrice;
     private double totalPrice;
     private Date buyingdate;
     private String importCompany;
-    private String threadColor;
 
     public BuyingThread2() {
     }
 
-    public BuyingThread2(int id, String threadName, int threadQuantity, double unitPrice, double totalPrice, Date buyingdate, String importCompany, String threadColor) {
+    public BuyingThread2(int id, String threadName, int threadQuantity, String threadColor, double unitPrice, double totalPrice, Date buyingdate, String importCompany) {
         this.id = id;
         this.threadName = threadName;
         this.threadQuantity = threadQuantity;
+        this.threadColor = threadColor;
         this.unitPrice = unitPrice;
         this.totalPrice = totalPrice;
         this.buyingdate = buyingdate;
         this.importCompany = importCompany;
-        this.threadColor = threadColor;
     }
 
-    public BuyingThread2(String threadName, int threadQuantity, double unitPrice, double totalPrice, Date buyingdate, String importCompany, String threadColor) {
+    public BuyingThread2(String threadName, int threadQuantity, String threadColor, double unitPrice, double totalPrice, Date buyingdate, String importCompany) {
         this.threadName = threadName;
         this.threadQuantity = threadQuantity;
+        this.threadColor = threadColor;
         this.unitPrice = unitPrice;
         this.totalPrice = totalPrice;
         this.buyingdate = buyingdate;
         this.importCompany = importCompany;
-        this.threadColor = threadColor;
     }
 
     public int getId() {
@@ -69,6 +69,14 @@ public class BuyingThread2 {
 
     public void setThreadQuantity(int threadQuantity) {
         this.threadQuantity = threadQuantity;
+    }
+
+    public String getThreadColor() {
+        return threadColor;
+    }
+
+    public void setThreadColor(String threadColor) {
+        this.threadColor = threadColor;
     }
 
     public double getUnitPrice() {
@@ -103,13 +111,15 @@ public class BuyingThread2 {
         this.importCompany = importCompany;
     }
 
-    public String getThreadColor() {
-        return threadColor;
+    public void save(BuyingThread2 buyingThread2) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setThreadColor(String threadColor) {
-        this.threadColor = threadColor;
+    public Object getCurrentDate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+   
+
     
     
 }
