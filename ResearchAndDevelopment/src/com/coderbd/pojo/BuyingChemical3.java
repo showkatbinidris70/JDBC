@@ -13,38 +13,38 @@ import java.util.Date;
  *
  * @author User
  */
-public class BuyingThread2 {
+public class BuyingChemical3 {
     private int id;
-    private String threadName;
-    private int threadQuantity;
+    private String chemicalName;
+    private int chemicalQuantity;
     private double unitPrice;
     private double totalPrice;
     private Date buyingdate;
     private String importCompany;
-    private String threadColor;
+    private Date expiredDate;
 
-    public BuyingThread2() {
+    public BuyingChemical3() {
     }
 
-    public BuyingThread2(int id, String threadName, int threadQuantity, double unitPrice, double totalPrice, Date buyingdate, String importCompany, String threadColor) {
+    public BuyingChemical3(int id, String chemicalName, int chemicalQuantity, double unitPrice, double totalPrice, Date buyingdate, String importCompany, Date expiredDate) {
         this.id = id;
-        this.threadName = threadName;
-        this.threadQuantity = threadQuantity;
+        this.chemicalName = chemicalName;
+        this.chemicalQuantity = chemicalQuantity;
         this.unitPrice = unitPrice;
         this.totalPrice = totalPrice;
         this.buyingdate = buyingdate;
         this.importCompany = importCompany;
-        this.threadColor = threadColor;
+        this.expiredDate = expiredDate;
     }
 
-    public BuyingThread2(String threadName, int threadQuantity, double unitPrice, double totalPrice, Date buyingdate, String importCompany, String threadColor) {
-        this.threadName = threadName;
-        this.threadQuantity = threadQuantity;
+    public BuyingChemical3(String chemicalName, int chemicalQuantity, double unitPrice, double totalPrice, Date buyingdate, String importCompany, Date expiredDate) {
+        this.chemicalName = chemicalName;
+        this.chemicalQuantity = chemicalQuantity;
         this.unitPrice = unitPrice;
         this.totalPrice = totalPrice;
         this.buyingdate = buyingdate;
         this.importCompany = importCompany;
-        this.threadColor = threadColor;
+        this.expiredDate = expiredDate;
     }
 
     public int getId() {
@@ -55,20 +55,20 @@ public class BuyingThread2 {
         this.id = id;
     }
 
-    public String getThreadName() {
-        return threadName;
+    public String getChemicalName() {
+        return chemicalName;
     }
 
-    public void setThreadName(String threadName) {
-        this.threadName = threadName;
+    public void setChemicalName(String chemicalName) {
+        this.chemicalName = chemicalName;
     }
 
-    public int getThreadQuantity() {
-        return threadQuantity;
+    public int getChemicalQuantity() {
+        return chemicalQuantity;
     }
 
-    public void setThreadQuantity(int threadQuantity) {
-        this.threadQuantity = threadQuantity;
+    public void setChemicalQuantity(int chemicalQuantity) {
+        this.chemicalQuantity = chemicalQuantity;
     }
 
     public double getUnitPrice() {
@@ -103,13 +103,13 @@ public class BuyingThread2 {
         this.importCompany = importCompany;
     }
 
-    public String getThreadColor() {
-        return threadColor;
+    public Date getExpiredDate() {
+        return expiredDate;
     }
 
-    public void setThreadColor(String threadColor) {
-        this.threadColor = threadColor;
+    public void setExpiredDate(Date expiredDate) {
+        this.expiredDate = expiredDate;
     }
     
-    
+   
 }

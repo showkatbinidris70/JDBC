@@ -13,34 +13,31 @@ import java.util.Date;
  *
  * @author User
  */
-public class GetOrder1 {
+public class GetOrderSummary7 {
     private int id;
     private String orderCode;
-    private int productQuantity;
+    private int productName;
     private double unitPrice;
     private double totalPrice;
-    private Date currentDate;
     private Date deliveryDate;
 
-    public GetOrder1() {
+    public GetOrderSummary7() {
     }
 
-    public GetOrder1(int id, String orderCode, int productQuantity, double unitPrice, double totalPrice, Date currentDate, Date deliveryDate) {
+    public GetOrderSummary7(int id, String orderCode, int productName, double unitPrice, double totalPrice, Date deliveryDate) {
         this.id = id;
         this.orderCode = orderCode;
-        this.productQuantity = productQuantity;
+        this.productName = productName;
         this.unitPrice = unitPrice;
         this.totalPrice = totalPrice;
-        this.currentDate = currentDate;
         this.deliveryDate = deliveryDate;
     }
 
-    public GetOrder1(String orderCode, int productQuantity, double unitPrice, double totalPrice, Date currentDate, Date deliveryDate) {
+    public GetOrderSummary7(String orderCode, int productName, double unitPrice, double totalPrice, Date deliveryDate) {
         this.orderCode = orderCode;
-        this.productQuantity = productQuantity;
+        this.productName = productName;
         this.unitPrice = unitPrice;
         this.totalPrice = totalPrice;
-        this.currentDate = currentDate;
         this.deliveryDate = deliveryDate;
     }
 
@@ -60,12 +57,12 @@ public class GetOrder1 {
         this.orderCode = orderCode;
     }
 
-    public int getProductQuantity() {
-        return productQuantity;
+    public int getProductName() {
+        return productName;
     }
 
-    public void setProductQuantity(int productQuantity) {
-        this.productQuantity = productQuantity;
+    public void setProductName(int productName) {
+        this.productName = productName;
     }
 
     public double getUnitPrice() {
@@ -82,14 +79,6 @@ public class GetOrder1 {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
-    }
-
-    public Date getCurrentDate() {
-        return currentDate;
-    }
-
-    public void setCurrentDate(Date currentDate) {
-        this.currentDate = currentDate;
     }
 
     public Date getDeliveryDate() {

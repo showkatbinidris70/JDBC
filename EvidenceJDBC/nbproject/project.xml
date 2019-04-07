@@ -3,7 +3,11 @@
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
+<<<<<<< HEAD
             <name>EvidenceJDBC</name>
+=======
+            <name>EvidenceJDBCFromYeasin</name>
+>>>>>>> 1880a5098551963e5dfd3e13436e5e860a30f95b
             <source-roots>
                 <root id="src.dir"/>
             </source-roots>

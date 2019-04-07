@@ -10,6 +10,7 @@
 /ResearchAndDevelopment/nbproject/private/
 /ResearchAndDevelopment/build/
 /ImageAtJTableWithMysql/nbproject/private/
+<<<<<<< HEAD
 /ImageSetup/nbproject/private/
 /ImageAtJTableWithMysql/build/
 /EvidenceJDBC/nbproject/private/
@@ -18,3 +19,9 @@
 /JDBCPractice/nbproject/private/
 /JdbcInsertData/nbproject/private/
 /JdbcInsertData/build/
+=======
+/ImageAtJTableWithMysql/build/
+/ImageSetup/nbproject/private/
+/EvidenceJDBC/nbproject/private/
+/EvidenceJDBC/build/
+>>>>>>> 1880a5098551963e5dfd3e13436e5e860a30f95b
