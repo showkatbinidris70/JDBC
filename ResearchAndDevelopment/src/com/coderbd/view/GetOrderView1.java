@@ -296,9 +296,8 @@ public class GetOrderView1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitOrderActionPerformed
-        // TODO add your handling code here:
+
         GetOrderDao1 gdao = new GetOrderDao1Impl();
-        //GetOrder1(String orderCode, int productQuantity, double unitPrice, double totalPrice, Date currentDate, Date deliveryDate)
         GetOrder1 order = new GetOrder1(txtOrderCode.getText().trim(), Integer.parseInt(txtProductQty.getText().trim()), Double.parseDouble(txtUnitPrice.getText().trim()), Double.parseDouble(txtTotalPrice.getText().trim()), new Date(), new Date());
         gdao.save(order);
         displayIntoTable();

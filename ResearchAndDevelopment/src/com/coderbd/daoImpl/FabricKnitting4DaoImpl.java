@@ -54,7 +54,7 @@ public class FabricKnitting4DaoImpl implements FabricKnitting4Dao {
             pstm.setDouble(4, fk.getWidth());
             pstm.setString(5, fk.getColorName());
             pstm.setDate(6, new java.sql.Date(fk.getDeliveryDate().getTime()));
-            pstm.executeQuery();
+            pstm.executeUpdate();
             System.out.println("Inset successfully into fabricKnitting table");
         } catch (SQLException ex) {
             Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -72,7 +72,7 @@ public class FabricKnitting4DaoImpl implements FabricKnitting4Dao {
             pstm.setDouble(4, fk.getWidth());
             pstm.setString(5, fk.getColorName());
             pstm.setDate(6, new java.sql.Date(fk.getDeliveryDate().getTime()));
-            pstm.executeQuery();
+            pstm.executeUpdate();
             System.out.println("Update successfully into fabricKnitting table");
         } catch (SQLException ex) {
             Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -117,7 +117,7 @@ public class FabricKnitting4DaoImpl implements FabricKnitting4Dao {
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
                 FabricKnitting4 fabricKnitting = new FabricKnitting4(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getString(6), rs.getDate(7));
-
+                list.add(fabricKnitting);
             }
         } catch (SQLException ex) {
             Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);

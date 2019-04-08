@@ -35,8 +35,9 @@ public class BuyingThreadView2 extends javax.swing.JFrame {
     public void displayIntoTable() {
         createTable();
         BuyingThread2Dao buyingThread2Dao = new BuyingThread2DaoImpl();
-        //buyingThread2Dao.ctreateTable();
+        
         buyingThread2Dao.ctreateTable();
+     
         List<BuyingThread2> list = buyingThread2Dao.getList();
         DefaultTableModel model = (DefaultTableModel) tblDisplayBuyingThread.getModel();
         Object[] row = new Object[8];
@@ -301,18 +302,18 @@ public class BuyingThreadView2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnBuyThreadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuyThreadActionPerformed
-
-        BuyingThread2Dao buyingThread2Dao = new BuyingThread2DaoImpl();
-        BuyingThread2 buyingThread2 = new BuyingThread2(txtThreadName.getText().trim(), Integer.parseInt(txtThreadQty.getText().trim()), txtThreadColor.getText().trim(), Double.parseDouble(txtunitPrice.getText().trim()), Double.parseDouble(txtTotalPrice.getText().trim()), new Date(), txtImportCompany.getText().trim());
-        buyingThread2.save(buyingThread2);
+        
+        BuyingThread2Dao bdao = new BuyingThread2DaoImpl();
+        BuyingThread2 bthread = new BuyingThread2(txtThreadName.getText().trim(), Integer.parseInt(txtThreadQty.getText().trim()), txtThreadColor.getText().trim(), Double.parseDouble(txtunitPrice.getText().trim()), Double.parseDouble(txtTotalPrice.getText().trim()), new Date(), txtImportCompany.getText().trim());
+        bdao.save(bthread);
         displayIntoTable();
+        
 
     }//GEN-LAST:event_btnBuyThreadActionPerformed
 

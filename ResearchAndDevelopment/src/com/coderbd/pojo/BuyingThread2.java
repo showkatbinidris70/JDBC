@@ -7,17 +7,16 @@ package com.coderbd.pojo;
 
 import java.util.Date;
 
-
-
 /**
  *
  * @author User
  */
 public class BuyingThread2 {
+
     private int id;
     private String threadName;
     private int threadQuantity;
-     private String threadColor;
+    private String threadColor;
     private double unitPrice;
     private double totalPrice;
     private Date buyingdate;
@@ -111,15 +110,4 @@ public class BuyingThread2 {
         this.importCompany = importCompany;
     }
 
-    public void save(BuyingThread2 buyingThread2) {
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Object getCurrentDate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-   
-
-    
-    
 }

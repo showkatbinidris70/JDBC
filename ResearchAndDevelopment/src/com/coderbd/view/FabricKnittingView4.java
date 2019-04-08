@@ -284,7 +284,7 @@ public class FabricKnittingView4 extends javax.swing.JFrame {
         // TODO add your handling code here:
         FabricKnitting4Dao fabricKnitting4Dao = new FabricKnitting4DaoImpl();
         FabricKnitting4 fabricKnitting4 = new FabricKnitting4(txtFabricName.getText().trim(), Integer.parseInt(txtFabricQty.getText().trim()), Double.parseDouble(txtHeight.getText().trim()), Double.parseDouble(txtWidth.getText().trim()), txtColorName.getText().trim(), new Date());
-        fabricKnitting4.save(fabricKnitting4);
+       fabricKnitting4Dao.save(fabricKnitting4);
         displayIntoTable();
 
     }//GEN-LAST:event_btnSubmitActionPerformed

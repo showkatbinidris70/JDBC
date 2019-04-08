@@ -33,29 +33,10 @@ public class BuyingChemicalView3 extends javax.swing.JFrame {
     }
 
     public void displayIntoTable() {
-        /*
-         createTable();
-        BuyingThread2Dao buyingThread2Dao = new BuyingThread2DaoImpl();
-        //buyingThread2Dao.ctreateTable();
-        buyingThread2Dao.ctreateTable();
-        List<BuyingThread2> list = buyingThread2Dao.getList();
-        DefaultTableModel model = (DefaultTableModel) tblDisplayBuyingThread.getModel();
-        Object[] row = new Object[8];
-        for (int i = 0; i < list.size(); i++) {
-            row[0] = list.get(i).getId();
-            row[1] = list.get(i).getThreadName();
-            row[2] = list.get(i).getThreadQuantity();
-            row[3] = list.get(i).getThreadColor();
-            row[4] = list.get(i).getUnitPrice();
-            row[5] = list.get(i).getTotalPrice();
-            row[6] = list.get(i).getBuyingdate();
-            row[7] = list.get(i).getImportCompany();
-            model.addRow(row);
-        }
-         */
+
         createTable();
         BuyingChemical3Dao buyingChemical3Dao = new BuyingChemical3DaoImpl();
-        //   BuyingChemical3Dao.ctreateTable();
+        buyingChemical3Dao.ctreateTable();
         List<BuyingChemical3> list = buyingChemical3Dao.getList();
         DefaultTableModel model = (DefaultTableModel) tblDisplayBuyingChemical.getModel();
         Object[] row = new Object[8];
@@ -321,7 +302,7 @@ public class BuyingChemicalView3 extends javax.swing.JFrame {
     private void btnBuyChemicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuyChemicalActionPerformed
         BuyingChemical3Dao buyingChemical3Dao = new BuyingChemical3DaoImpl();
         BuyingChemical3 buyingChemical3 = new BuyingChemical3(txtChemicalName.getText().trim(), Integer.parseInt(txtChemicalQty.getText().trim()), Double.parseDouble(txtUnitPrice.getText().trim()), Double.parseDouble(txtTotalPrice.getText().trim()), new Date(), txtImportCompany.getText().trim(), new Date());
-        buyingChemical3.save(buyingChemical3);
+        buyingChemical3Dao.save(buyingChemical3);
         displayIntoTable();
 
     }//GEN-LAST:event_btnBuyChemicalActionPerformed
