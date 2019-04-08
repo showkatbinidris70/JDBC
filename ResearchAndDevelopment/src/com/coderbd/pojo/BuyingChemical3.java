@@ -110,6 +110,10 @@ public class BuyingChemical3 {
     public void setExpiredDate(Date expiredDate) {
         this.expiredDate = expiredDate;
     }
+
+    public void save(BuyingChemical3 buyingChemical3) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
    
 }

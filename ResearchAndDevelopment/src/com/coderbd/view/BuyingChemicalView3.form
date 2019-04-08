@@ -37,8 +37,8 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel4" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel4" min="-2" pref="511" max="-2" attributes="0"/>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -69,9 +69,9 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <Component id="jLabel3" min="-2" pref="117" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jTextField1" min="-2" pref="228" max="-2" attributes="0"/>
+                                          <Component id="txtChemicalName" min="-2" pref="228" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jTextField7" min="-2" pref="228" max="-2" attributes="0"/>
+                                      <Component id="txtChemicalQty" min="-2" pref="228" max="-2" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel11" min="-2" pref="117" max="-2" attributes="0"/>
                                           <EmptySpace min="246" pref="246" max="-2" attributes="0"/>
@@ -92,18 +92,20 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField2" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
-                                      <Component id="jTextField3" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
-                                      <Component id="jTextField5" min="-2" pref="228" max="-2" attributes="0"/>
-                                      <Component id="jTextField4" min="-2" pref="228" max="-2" attributes="0"/>
-                                      <Component id="jTextField6" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
+                                      <Component id="txtUnitPrice" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
+                                      <Component id="txtTotalPrice" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
+                                      <Component id="txtImportCompany" min="-2" pref="228" max="-2" attributes="0"/>
+                                      <Component id="txtBuyingDate" min="-2" pref="228" max="-2" attributes="0"/>
+                                      <Component id="txtExpiredDate" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="106" pref="106" max="-2" attributes="0"/>
+                          <Component id="btnBuyChemical" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="btnExit" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -113,6 +115,11 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel10" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="btnBuyChemical1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -135,20 +142,20 @@
                                           <Component id="jLabel11" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
-                                          <Component id="jTextField1" alignment="0" pref="28" max="32767" attributes="0"/>
+                                          <Component id="txtChemicalName" alignment="0" pref="28" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField7" alignment="0" pref="28" max="32767" attributes="0"/>
+                                          <Component id="txtChemicalQty" alignment="0" pref="28" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jTextField2" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="txtUnitPrice" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                       <Component id="jLabel4" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel5" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                      <Component id="jTextField3" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="txtTotalPrice" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -156,25 +163,30 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel6" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="jTextField4" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="txtBuyingDate" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField5" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="txtImportCompany" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jLabel7" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel8" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="jTextField6" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="txtExpiredDate" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnBuyChemical" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnExit" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="10" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnBuyChemical1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabel10" min="-2" pref="29" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -198,7 +210,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable1">
+            <Component class="javax.swing.JTable" name="tblDisplayBuyingChemical">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="8" rowCount="0">
@@ -265,7 +277,7 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel2">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="txtChemicalName">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -289,9 +301,9 @@
             <Property name="text" type="java.lang.String" value="Unit Price"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="txtUnitPrice">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="javax.swing.JTextField" name="txtTotalPrice">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
@@ -304,7 +316,7 @@
             <Property name="text" type="java.lang.String" value="Total Price"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField4">
+        <Component class="javax.swing.JTextField" name="txtBuyingDate">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
@@ -328,9 +340,9 @@
             <Property name="text" type="java.lang.String" value="Import Company"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField5">
+        <Component class="javax.swing.JTextField" name="txtImportCompany">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField6">
+        <Component class="javax.swing.JTextField" name="txtExpiredDate">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
@@ -354,7 +366,7 @@
             <Property name="text" type="java.lang.String" value="Buying Chemical"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnBuyChemical">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="1"/>
@@ -362,8 +374,11 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Buy Camecal"/>
+            <Property name="text" type="java.lang.String" value="Buy Chemical"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuyChemicalActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
@@ -376,7 +391,7 @@
             <Property name="text" type="java.lang.String" value="                                                                           Copyright : 2019 Round - 39, J2EE, CCSL"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField7">
+        <Component class="javax.swing.JTextField" name="txtChemicalQty">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel11">
           <Properties>
@@ -388,6 +403,34 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Chemical  Qty"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnExit">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Exist"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExitActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnBuyChemical1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Back"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuyChemical1ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

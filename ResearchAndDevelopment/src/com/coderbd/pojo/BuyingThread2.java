@@ -112,7 +112,7 @@ public class BuyingThread2 {
     }
 
     public void save(BuyingThread2 buyingThread2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public Object getCurrentDate() {

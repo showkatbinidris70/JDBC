@@ -20,9 +20,9 @@ public interface FabricKnitting4Dao {
 
     void update(FabricKnitting4 fk);
 
-    FabricKnitting4 getGetOrder1ById(int id);
+    FabricKnitting4 getFabricKnittingById(int id);
 
-    FabricKnitting4 getGetOrder1ByGetOrder1Code(String code);
+    FabricKnitting4 getFabricKnittingByFabricName(String name);
 
     void dalete(int id);
 

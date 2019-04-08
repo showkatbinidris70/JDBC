@@ -98,6 +98,10 @@ public class FabricDyeing5 {
     public void setDeliveryDate(Date deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
+
+    public void save(FabricDyeing5 fabricDyeing5) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
    

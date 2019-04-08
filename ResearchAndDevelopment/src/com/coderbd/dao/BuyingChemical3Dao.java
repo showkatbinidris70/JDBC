@@ -20,9 +20,10 @@ public interface BuyingChemical3Dao {
 
     void update(BuyingChemical3 bc);
 
-    BuyingChemical3 getGetOrder1ById(int id);
+    BuyingChemical3 getBuyingChemicalById(int id);
 
-    BuyingChemical3 getGetOrder1ByGetOrder1Code(String code);
+   // BuyingChemical3 getGetOrder1ByGetOrder1Code(String code);
+    BuyingChemical3 getBuyingChemicalByChemaicalName(String Name);
 
     void dalete(int id);
 

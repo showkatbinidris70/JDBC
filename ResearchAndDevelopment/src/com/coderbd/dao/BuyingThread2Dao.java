@@ -20,9 +20,11 @@ public interface BuyingThread2Dao {
 
     void update(BuyingThread2 bt);
 
-    BuyingThread2 getGetOrder1ById(int id);
+   // BuyingThread2 getGetOrder1ById(int id);
+    BuyingThread2 getBuyingThreadById(int id);
 
-    BuyingThread2 getGetOrder1ByGetOrder1Code(String code);
+   // BuyingThread2 getGetOrder1ByGetOrder1Code(String code);
+    BuyingThread2 getBuyingThreadByThreadName(String name);
 
     void dalete(int id);
 

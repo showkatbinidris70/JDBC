@@ -101,6 +101,10 @@ public class FabricKnitting4 {
     public void setDeliveryDate(Date deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
+
+    public void save(FabricKnitting4 fabricKnitting4) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

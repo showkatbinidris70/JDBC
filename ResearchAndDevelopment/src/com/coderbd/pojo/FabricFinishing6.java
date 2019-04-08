@@ -8,13 +8,6 @@ package com.coderbd.pojo;
 import java.util.Date;
 
 
-
-
-
-/**
- *
- * @author User
- */
 public class FabricFinishing6 {
     private int id;
     private String FabricName;
@@ -111,6 +104,10 @@ public class FabricFinishing6 {
 
     public void setDeliveryDate(Date deliveryDate) {
         this.deliveryDate = deliveryDate;
+    }
+
+    public void save(FabricFinishing6 fabricFinishing6) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
    

@@ -80,6 +80,7 @@ public class GetOrderView1 extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         btnUpdateOrder = new javax.swing.JButton();
         btnUpdateOrder1 = new javax.swing.JButton();
+        btnUpdateOrder2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 0, 0));
@@ -153,10 +154,19 @@ public class GetOrderView1 extends javax.swing.JFrame {
 
         btnUpdateOrder1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnUpdateOrder1.setForeground(new java.awt.Color(0, 102, 102));
-        btnUpdateOrder1.setText("Exit");
+        btnUpdateOrder1.setText("Back");
         btnUpdateOrder1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateOrder1ActionPerformed(evt);
+            }
+        });
+
+        btnUpdateOrder2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnUpdateOrder2.setForeground(new java.awt.Color(0, 102, 102));
+        btnUpdateOrder2.setText("Exit");
+        btnUpdateOrder2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateOrder2ActionPerformed(evt);
             }
         });
 
@@ -209,8 +219,10 @@ public class GetOrderView1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(224, 224, 224)
+                .addGap(27, 27, 27)
                 .addComponent(btnUpdateOrder1)
+                .addGap(130, 130, 130)
+                .addComponent(btnUpdateOrder2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -251,9 +263,11 @@ public class GetOrderView1 extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnSubmitOrder)
                             .addComponent(btnUpdateOrder))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addComponent(btnUpdateOrder1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnUpdateOrder1)
+                    .addComponent(btnUpdateOrder2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -292,9 +306,13 @@ public class GetOrderView1 extends javax.swing.JFrame {
 
     private void btnUpdateOrder1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateOrder1ActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
-        
+        new MainPageView().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnUpdateOrder1ActionPerformed
+
+    private void btnUpdateOrder2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateOrder2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateOrder2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -338,6 +356,7 @@ public class GetOrderView1 extends javax.swing.JFrame {
     private javax.swing.JButton btnSubmitOrder;
     private javax.swing.JButton btnUpdateOrder;
     private javax.swing.JButton btnUpdateOrder1;
+    private javax.swing.JButton btnUpdateOrder2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

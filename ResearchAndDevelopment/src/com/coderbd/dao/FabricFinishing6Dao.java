@@ -19,9 +19,9 @@ public interface FabricFinishing6Dao {
 
     void update(FabricFinishing6 ff);
 
-    FabricFinishing6 getGetOrder1ById(int id);
+    FabricFinishing6 getFabricFinishingById(int id);
 
-    FabricFinishing6 getGetOrder1ByGetOrder1Code(String code);
+    FabricFinishing6 getFabricFinishingByFinishingName(String name);
 
     void dalete(int id);
 

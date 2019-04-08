@@ -19,9 +19,9 @@ public interface FabricDyeing5Dao {
 
     void update(FabricDyeing5 fd);
 
-    FabricDyeing5 getGetOrder1ById(int id);
+    FabricDyeing5 getFabricDyeingById(int id);
 
-    FabricDyeing5 getGetOrder1ByGetOrder1Code(String code);
+    FabricDyeing5 getFabricDyeingByFabricName(String name);
 
     void dalete(int id);
 
