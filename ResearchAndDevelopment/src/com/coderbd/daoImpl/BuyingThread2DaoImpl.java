@@ -63,7 +63,21 @@ public class BuyingThread2DaoImpl implements BuyingThread2Dao {
 
     @Override
     public void update(BuyingThread2 bt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "update buyingThread set thread_name = ? where id = ?";
+         try {
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, bt.getThreadName());
+            pstm.setInt(2, bt.getThreadQuantity());
+            pstm.setString(3, bt.getThreadColor());
+            pstm.setDouble(4, bt.getUnitPrice());
+            pstm.setDouble(5, bt.getTotalPrice());
+            pstm.setDate(6, new java.sql.Date(bt.getBuyingdate().getTime()));
+            pstm.setString(7, bt.getImportCompany());
+            pstm.executeQuery();
+            System.out.println("Update successfully into buyingThread table");
+        } catch (SQLException ex) {
+            Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override

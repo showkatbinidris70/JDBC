@@ -284,6 +284,9 @@
         <Component class="javax.swing.JTextField" name="txtProductQty">
         </Component>
         <Component class="javax.swing.JTextField" name="txtUnitPrice">
+          <Events>
+            <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtUnitPriceKeyReleased"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>

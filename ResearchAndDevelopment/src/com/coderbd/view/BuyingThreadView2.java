@@ -111,6 +111,12 @@ public class BuyingThreadView2 extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(102, 255, 255));
         jLabel4.setText("Unit Price");
 
+        txtunitPrice.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtunitPriceKeyReleased(evt);
+            }
+        });
+
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 255, 255));
         jLabel5.setText("Total Price");
@@ -270,8 +276,7 @@ public class BuyingThreadView2 extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnBuyThread1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -316,6 +321,14 @@ public class BuyingThreadView2 extends javax.swing.JFrame {
         new MainPageView().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnBuyThread1ActionPerformed
+
+    private void txtunitPriceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtunitPriceKeyReleased
+        // TODO add your handling code here:
+        int threadQty = Integer.parseInt(txtThreadQty.getText());
+        double unitPrice = Double.parseDouble(txtunitPrice.getText());
+        double totalAmount = threadQty * unitPrice;
+        txtTotalPrice.setText(totalAmount + "");
+    }//GEN-LAST:event_txtunitPriceKeyReleased
 
     /**
      * @param args the command line arguments

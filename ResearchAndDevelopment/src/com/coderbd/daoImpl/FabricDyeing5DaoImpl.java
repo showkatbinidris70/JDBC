@@ -53,7 +53,7 @@ public class FabricDyeing5DaoImpl implements FabricDyeing5Dao {
             pstm.setString(5, fd.getColorName());
             pstm.setDate(6, new java.sql.Date(fd.getDeliveryDate().getTime()));
             pstm.executeQuery();
-            System.out.println("Inset successfully into fabricDyeing table");
+            System.out.println("Update successfully into fabricDyeing table");
         } catch (SQLException ex) {
             Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -61,7 +61,20 @@ public class FabricDyeing5DaoImpl implements FabricDyeing5Dao {
 
     @Override
     public void update(FabricDyeing5 fd) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       String sql = "update fabricDyeing set fabric_name = ? where = id ?";
+        try {
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, fd.getFabricName());
+            pstm.setInt(2, fd.getFabricQuantity());
+            pstm.setDouble(3, fd.getHeight());
+            pstm.setDouble(4, fd.getWidth());
+            pstm.setString(5, fd.getColorName());
+            pstm.setDate(6, new java.sql.Date(fd.getDeliveryDate().getTime()));
+            pstm.executeQuery();
+            System.out.println("Inset successfully into fabricDyeing table");
+        } catch (SQLException ex) {
+            Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override

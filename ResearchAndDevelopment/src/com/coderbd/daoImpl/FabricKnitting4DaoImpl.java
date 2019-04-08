@@ -63,7 +63,20 @@ public class FabricKnitting4DaoImpl implements FabricKnitting4Dao {
 
     @Override
     public void update(FabricKnitting4 fk) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "update fabricKnitting set  fabric_name = ? where id = ?";
+        try {
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, fk.getFabricName());
+            pstm.setInt(2, fk.getFabricQuantity());
+            pstm.setDouble(3, fk.getHeight());
+            pstm.setDouble(4, fk.getWidth());
+            pstm.setString(5, fk.getColorName());
+            pstm.setDate(6, new java.sql.Date(fk.getDeliveryDate().getTime()));
+            pstm.executeQuery();
+            System.out.println("Update successfully into fabricKnitting table");
+        } catch (SQLException ex) {
+            Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override

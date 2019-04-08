@@ -110,6 +110,12 @@ public class GetOrderView1 extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(102, 255, 255));
         jLabel4.setText("Product Qty");
 
+        txtUnitPrice.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtUnitPriceKeyReleased(evt);
+            }
+        });
+
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 255, 255));
         jLabel5.setText("Unit Price");
@@ -313,6 +319,14 @@ public class GetOrderView1 extends javax.swing.JFrame {
     private void btnUpdateOrder2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateOrder2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnUpdateOrder2ActionPerformed
+
+    private void txtUnitPriceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUnitPriceKeyReleased
+
+        int productQty = Integer.parseInt(txtProductQty.getText());
+        double unitPrice = Double.parseDouble(txtUnitPrice.getText());
+        double totalAmount = productQty * unitPrice;
+        txtTotalPrice.setText(totalAmount + "");
+    }//GEN-LAST:event_txtUnitPriceKeyReleased
 
     /**
      * @param args the command line arguments

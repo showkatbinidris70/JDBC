@@ -373,28 +373,28 @@ public class ProductView extends javax.swing.JFrame {
         try {
             Product p = new Product(productName, productCode, date, quentity, unitPrice, totalAmount);
             pDao.save(p);
-            
+
             SummaryDao sDao = new SummaryDaoImp();
             try {
                 Summary summary = sDao.getSummaryByProductCode(txtPCode.getText().trim());
                 if (summary.getProductCode() != null) {
                     int totalQty = summary.getTotalQty() + Integer.parseInt(txtQty.getText().trim());
                     int avaiableQty = summary.getAvailableQty() + Integer.parseInt(txtQty.getText().trim());
-                    
+
                     Summary summaryUp = new Summary(summary.getProductCode(), totalQty, summary.getSoldQty(), avaiableQty);
                     sDao.update(summaryUp);
                 } else {
-                   Product product1 = pDao.getProductByCode(p.getProductCode());
-                   Summary summary2 = new Summary(txtPName.getText(), txtPCode.getText(), Integer.parseInt(txtQty.getText()), 0, Integer.parseInt(txtQty.getText()), product1);
-                   sDao.save(summary2);
+                    Product product1 = pDao.getProductByCode(p.getProductCode());
+                    Summary summary2 = new Summary(txtPName.getText(), txtPCode.getText(), Integer.parseInt(txtQty.getText()), 0, Integer.parseInt(txtQty.getText()), product1);
+                    sDao.save(summary2);
                 }
             } catch (Exception e) {
                 Product product1 = pDao.getProductByCode(p.getProductCode());
-                   Summary summary2 = new Summary(txtPName.getText(), txtPCode.getText(), Integer.parseInt(txtQty.getText()), 0, Integer.parseInt(txtQty.getText()), product1);
-                   sDao.save(summary2);
+                Summary summary2 = new Summary(txtPName.getText(), txtPCode.getText(), Integer.parseInt(txtQty.getText()), 0, Integer.parseInt(txtQty.getText()), product1);
+                sDao.save(summary2);
             }
         } catch (Exception e) {
-            
+
             e.printStackTrace();
         }
         displayProductIntoTable();
@@ -417,7 +417,7 @@ public class ProductView extends javax.swing.JFrame {
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
         ProductDao pDao = new ProcuctDaoImp();
-        
+
         String productName = txtPName.getText();
         String productCode = txtPCode.getText();
         Date date = new Date(System.currentTimeMillis());
@@ -445,7 +445,7 @@ public class ProductView extends javax.swing.JFrame {
     }//GEN-LAST:event_tabDisplayMouseClicked
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-       ProductDao pDao = new ProcuctDaoImp();
+        ProductDao pDao = new ProcuctDaoImp();
 //       DefaultTableModel model = (DefaultTableModel) tabDisplay.getModel();
 //       model.getS
         try {
@@ -458,8 +458,8 @@ public class ProductView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnBuy1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuy1ActionPerformed
-        
-        
+
+
     }//GEN-LAST:event_btnBuy1ActionPerformed
 
     private void btnBuy2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuy2ActionPerformed

@@ -60,7 +60,21 @@ public class FabricFinishing6DaoImpl implements FabricFinishing6Dao{
 
     @Override
     public void update(FabricFinishing6 ff) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "update FabricFinishing set fabric_name = ? where id = ?";
+        try {
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, ff.getFabricName());
+            pstm.setString(2, ff.getFinishingName());
+            pstm.setInt(3, ff.getFabricQuantity());
+            pstm.setDouble(4, ff.getHeight());
+            pstm.setDouble(5, ff.getWidth());
+            pstm.setString(6, ff.getColorName());
+            pstm.setDate(7, new java.sql.Date(ff.getDeliveryDate().getTime()));
+            pstm.executeQuery();
+            System.out.println("Update successfully into FabricFinishing table");
+        } catch (SQLException ex) {
+            Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override

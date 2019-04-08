@@ -64,7 +64,21 @@ public class BuyingChemical3DaoImpl implements BuyingChemical3Dao {
 
     @Override
     public void update(BuyingChemical3 bc) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "update buyingChemical set chemical_name = ? where id = ?";
+        try {
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, bc.getChemicalName());
+            pstm.setInt(2, bc.getChemicalQuantity());
+            pstm.setDouble(3, bc.getUnitPrice());
+            pstm.setDouble(4, bc.getTotalPrice());
+            pstm.setDate(5, new java.sql.Date(bc.getBuyingdate().getTime()));
+            pstm.setString(6, bc.getImportCompany());
+            pstm.setDate(7, new java.sql.Date(bc.getExpiredDate().getTime()));
+            pstm.executeQuery();
+            System.out.println("Update successfully into buyingChemical table");
+        } catch (SQLException ex) {
+            Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override

@@ -27,13 +27,7 @@ public class GetOrderDao1Impl implements GetOrderDao1 {
 
     @Override
     public void ctreateTable() {
-        /*
-        String sql = "create table IF NOT EXISTS product(id int(11) "
-                + "auto_increment primary key, product_name varchar(50),"
-                + "product_code varchar(30),qty int(11),unit_price double,"
-                + "total_price double, purchase_date date, p_cat_id int(5),"
-                + "FOREIGN KEY (p_cat_id) REFERENCES product_category(id))";
-         */
+       
         String sql = "create table IF NOT EXISTS getOrder(id int(11) auto_increment primary key,order_code varchar(30),product_qty int(11),unit_price double,total_price double,order_date date, delivery_date date)";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
@@ -67,7 +61,22 @@ public class GetOrderDao1Impl implements GetOrderDao1 {
 
     @Override
     public void update(GetOrder1 g) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+         String sql = "update getOrder set order_code = ? where id = ?";
+        try {
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, g.getOrderCode());
+            pstm.setInt(2, g.getProductQuantity());
+            pstm.setDouble(3, g.getUnitPrice());
+            pstm.setDouble(4, g.getTotalPrice());
+            pstm.setDate(5, new java.sql.Date(g.getCurrentDate().getTime()));
+            pstm.setDate(6, new java.sql.Date(g.getCurrentDate().getTime()));
+            pstm.executeUpdate();
+            System.out.println(" update success !");
+
+        } catch (SQLException ex) {
+            Logger.getLogger(GetOrderDao1Impl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override

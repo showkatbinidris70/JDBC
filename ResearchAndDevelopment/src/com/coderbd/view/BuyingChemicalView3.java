@@ -52,10 +52,10 @@ public class BuyingChemicalView3 extends javax.swing.JFrame {
             row[7] = list.get(i).getImportCompany();
             model.addRow(row);
         }
-        */
+         */
         createTable();
         BuyingChemical3Dao buyingChemical3Dao = new BuyingChemical3DaoImpl();
-      //   BuyingChemical3Dao.ctreateTable();
+        //   BuyingChemical3Dao.ctreateTable();
         List<BuyingChemical3> list = buyingChemical3Dao.getList();
         DefaultTableModel model = (DefaultTableModel) tblDisplayBuyingChemical.getModel();
         Object[] row = new Object[8];
@@ -129,6 +129,12 @@ public class BuyingChemicalView3 extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 255, 255));
         jLabel4.setText("Unit Price");
+
+        txtUnitPrice.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtUnitPriceKeyReleased(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 255, 255));
@@ -330,6 +336,14 @@ public class BuyingChemicalView3 extends javax.swing.JFrame {
         new MainPageView().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnBuyChemical1ActionPerformed
+
+    private void txtUnitPriceKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtUnitPriceKeyReleased
+        // TODO add your handling code here:
+        int chemicalQty = Integer.parseInt(txtChemicalQty.getText());
+        double unitPrice = Double.parseDouble(txtUnitPrice.getText());
+        double totalAmount = chemicalQty * unitPrice;
+        txtTotalPrice.setText(totalAmount + "");
+    }//GEN-LAST:event_txtUnitPriceKeyReleased
 
     /**
      * @param args the command line arguments
