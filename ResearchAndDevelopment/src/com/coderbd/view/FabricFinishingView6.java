@@ -23,19 +23,20 @@ public class FabricFinishingView6 extends javax.swing.JFrame {
      */
     public FabricFinishingView6() {
         initComponents();
-        displayIntoTable();
+       displayIntoTable();
     }
 
-    public void createTable() {
+   public void createTable() {
         DefaultTableModel model = (DefaultTableModel) tblDisplayFabricFinishing.getModel();
         model.setRowCount(0);
 
     }
 
     public void displayIntoTable() {
+       
         createTable();
         FabricFinishing6Dao fabricFinishing6Dao = new FabricFinishing6DaoImpl();
-        // buyingThread2Dao.ctreateTable();
+        fabricFinishing6Dao.ctreateTable();
         List<FabricFinishing6> list = fabricFinishing6Dao.getList();
         DefaultTableModel model = (DefaultTableModel) tblDisplayFabricFinishing.getModel();
         Object[] row = new Object[8];
@@ -46,8 +47,8 @@ public class FabricFinishingView6 extends javax.swing.JFrame {
             row[3] = list.get(i).getFabricQuantity();
             row[4] = list.get(i).getHeight();
             row[5] = list.get(i).getWidth();
-            row[7] = list.get(i).getColorName();
-            row[8] = list.get(i).getDeliveryDate();
+            row[6] = list.get(i).getColorName();
+            row[7] = list.get(i).getDeliveryDate();
 
             model.addRow(row);
         }
@@ -91,7 +92,7 @@ public class FabricFinishingView6 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel1.setText("                       Research & Development (RND) Department                                       6");
+        jLabel1.setText("                       Research & Development (RND) Department                                       ");
 
         tblDisplayFabricFinishing.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -295,9 +296,10 @@ public class FabricFinishingView6 extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
-        FabricFinishing6Dao fabricDyeing5Dao = new FabricFinishing6DaoImpl();
+        
+        FabricFinishing6Dao fabricFinishing6Dao = new FabricFinishing6DaoImpl();
         FabricFinishing6 fabricFinishing6 = new FabricFinishing6(txtFabricName.getText().trim(), txtFinishingName.getText().trim(), Integer.parseInt(txtFabricQty.getText().trim()), Double.parseDouble(txtHeight.getText().trim()), Double.parseDouble(txtWidth.getText().trim()), txtColorName.getText().trim(), new Date());
-        fabricFinishing6.save(fabricFinishing6);
+       fabricFinishing6Dao.save(fabricFinishing6);
         displayIntoTable();
     }//GEN-LAST:event_btnSubmitActionPerformed
 

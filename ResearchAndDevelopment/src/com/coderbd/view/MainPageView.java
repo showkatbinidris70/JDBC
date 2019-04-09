@@ -251,6 +251,8 @@ public class MainPageView extends javax.swing.JFrame {
 
     private void btnSubmitOrder4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitOrder4ActionPerformed
         // TODO add your handling code here:
+        new Summary().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnSubmitOrder4ActionPerformed
 
     private void btnSubmitOrder5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitOrder5ActionPerformed

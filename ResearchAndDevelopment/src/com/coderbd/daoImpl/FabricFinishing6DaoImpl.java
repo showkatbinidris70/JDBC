@@ -21,19 +21,22 @@ import java.util.logging.Logger;
  *
  * @author User
  */
-public class FabricFinishing6DaoImpl implements FabricFinishing6Dao{
-     public static void main(String[] args) {
+public class FabricFinishing6DaoImpl implements FabricFinishing6Dao {
+
+    static Connection conn = ProductBDConnection.getConnection();
+
+    public static void main(String[] args) {
         ProductBDConnection.getConnection();
     }
 
-    static Connection conn = ProductBDConnection.getConnection();
     @Override
     public void ctreateTable() {
-        String sql = "create table IF NOT EXISTS FabricFinishing(id int(11) auto_increment primary key, fabric_name varchar(50),finishing_name varchar(50),fabric_qty int(11), height double, width double,color_name varchar(50), delivery_date date)";
+       
+        String sql = "create table IF NOT EXISTS fabricFinishing(id int(11) auto_increment primary key, fabric_name varchar(50),finishing_name varchar(50),fabric_qty int(11), height double, width double,color_name varchar(50), delivery_date date)";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.execute();
-            System.out.println("FabricFinishing Table Created");
+            System.out.println("fabricFinishing Table Created");
         } catch (SQLException ex) {
             Logger.getLogger(BuyingChemical3DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -41,7 +44,8 @@ public class FabricFinishing6DaoImpl implements FabricFinishing6Dao{
 
     @Override
     public void save(FabricFinishing6 ff) {
-         String sql = "insert into FabricFinishing(fabric_name, finishing_name, fabric_qty, height ,width,  color_name , delivery_date) values = (?,?,?,?,?,?,?)";
+       
+        String sql = "insert into fabricFinishing(fabric_name, finishing_name, fabric_qty, height ,width,  color_name , delivery_date) values  (?,?,?,?,?,?,?)";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, ff.getFabricName());
@@ -51,8 +55,8 @@ public class FabricFinishing6DaoImpl implements FabricFinishing6Dao{
             pstm.setDouble(5, ff.getWidth());
             pstm.setString(6, ff.getColorName());
             pstm.setDate(7, new java.sql.Date(ff.getDeliveryDate().getTime()));
-            pstm.executeQuery();
-            System.out.println("Inset successfully into FabricFinishing table");
+            pstm.executeUpdate();
+            System.out.println("Inset successfully into fabricFinishing table");
         } catch (SQLException ex) {
             Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -60,7 +64,8 @@ public class FabricFinishing6DaoImpl implements FabricFinishing6Dao{
 
     @Override
     public void update(FabricFinishing6 ff) {
-        String sql = "update FabricFinishing set fabric_name = ? where id = ?";
+       
+        String sql = "update fabricFinishing set fabric_name = ? where id = ?";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, ff.getFabricName());
@@ -70,8 +75,8 @@ public class FabricFinishing6DaoImpl implements FabricFinishing6Dao{
             pstm.setDouble(5, ff.getWidth());
             pstm.setString(6, ff.getColorName());
             pstm.setDate(7, new java.sql.Date(ff.getDeliveryDate().getTime()));
-            pstm.executeQuery();
-            System.out.println("Update successfully into FabricFinishing table");
+            pstm.executeUpdate();
+            System.out.println("Update successfully into fabricFinishing table");
         } catch (SQLException ex) {
             Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -84,14 +89,15 @@ public class FabricFinishing6DaoImpl implements FabricFinishing6Dao{
 
     @Override
     public FabricFinishing6 getFabricFinishingByFinishingName(String name) {
+        
         FabricFinishing6 fabricFinishing6 = null;
-        String sql = "Select * from FabricFinishing where fabric_name = ?";
+        String sql = "Select * from fabricFinishing where fabric_name = ?";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, name);
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
-                FabricFinishing6 fabricFinishing = new FabricFinishing6(rs.getString(1), rs.getString(2),rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getString(6), rs.getDate(7));
+                FabricFinishing6 fabricFinishing = new FabricFinishing6(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getString(6), rs.getDate(7));
             }
         } catch (SQLException ex) {
             Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -106,19 +112,20 @@ public class FabricFinishing6DaoImpl implements FabricFinishing6Dao{
 
     @Override
     public List<FabricFinishing6> getList() {
-       List<FabricFinishing6> list = new ArrayList();
-        String sql = "select * from buyingChemical";
+        
+        List<FabricFinishing6> list = new ArrayList();
+        String sql = "select * from fabricFinishing";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
-                FabricFinishing6 fabricFinishing6 = new FabricFinishing6(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getInt(4), rs.getDouble(5), rs.getDouble(6), rs.getString(7), rs.getDate(8));
-
+                FabricFinishing6 fabricFinishing6 = new FabricFinishing6(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getDouble(5), rs.getDouble(6), rs.getString(7), rs.getDate(8));
+                list.add(fabricFinishing6);
             }
         } catch (SQLException ex) {
             Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         return list;
     }
-    
+
 }

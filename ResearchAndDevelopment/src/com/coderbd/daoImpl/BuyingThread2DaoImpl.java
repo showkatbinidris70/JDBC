@@ -22,15 +22,16 @@ import java.util.logging.Logger;
  * @author User
  */
 public class BuyingThread2DaoImpl implements BuyingThread2Dao {
+
     static Connection conn = ProductBDConnection.getConnection();
-    
+
     public static void main(String[] args) {
         ProductBDConnection.getConnection();
     }
 
     @Override
     public void ctreateTable() {
-        
+
         String sql = "create table IF NOT EXISTS buyingThread(id int (11) auto_increment primary key, thread_name varchar(50),thread_qty int(11), thread_color varchar(50),unit_price double, total_price double, buying_date date, import_company varchar(50))";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
@@ -43,7 +44,7 @@ public class BuyingThread2DaoImpl implements BuyingThread2Dao {
 
     @Override
     public void save(BuyingThread2 bt) {
-       
+
         String sql = "insert into buyingThread(thread_name ,thread_qty, thread_color ,unit_price, total_price, buying_date , import_company) values (?,?,?,?,?,?,?)";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
@@ -64,7 +65,7 @@ public class BuyingThread2DaoImpl implements BuyingThread2Dao {
     @Override
     public void update(BuyingThread2 bt) {
         String sql = "update buyingThread set thread_name = ? where id = ?";
-         try {
+        try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, bt.getThreadName());
             pstm.setInt(2, bt.getThreadQuantity());
@@ -87,7 +88,7 @@ public class BuyingThread2DaoImpl implements BuyingThread2Dao {
 
     @Override
     public BuyingThread2 getBuyingThreadByThreadName(String name) {
-        
+
         BuyingThread2 uyingThread2 = null;
         String sql = "Select * from buyingThread where thread_name = ?";
         try {

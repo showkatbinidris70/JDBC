@@ -27,18 +27,19 @@ public class FabricKnittingView4 extends javax.swing.JFrame {
     }
 
     public void createTable() {
-        DefaultTableModel model = (DefaultTableModel) tblDisplayFabricKnitting.getModel();
+       DefaultTableModel model = (DefaultTableModel) tblDisplayFabricKnitting.getModel();
         model.setRowCount(0);
 
     }
 
     public void displayIntoTable() {
+        
         createTable();
         FabricKnitting4Dao fabricKnitting4Dao = new FabricKnitting4DaoImpl();
-        // buyingThread2Dao.ctreateTable();
+       fabricKnitting4Dao.ctreateTable();
         List<FabricKnitting4> list = fabricKnitting4Dao.getList();
         DefaultTableModel model = (DefaultTableModel) tblDisplayFabricKnitting.getModel();
-        Object[] row = new Object[8];
+        Object[] row = new Object[7];
         for (int i = 0; i < list.size(); i++) {
             row[0] = list.get(i).getId();
             row[1] = list.get(i).getFabricName();
@@ -88,7 +89,7 @@ public class FabricKnittingView4 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel1.setText("                       Research & Development(RND)Department                                       4");
+        jLabel1.setText("                       Research & Development(RND)Department                                       ");
 
         tblDisplayFabricKnitting.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -210,7 +211,6 @@ public class FabricKnittingView4 extends javax.swing.JFrame {
                                 .addGap(101, 101, 101)
                                 .addComponent(btnExit)))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
             .addGroup(jPanel4Layout.createSequentialGroup()
@@ -282,9 +282,15 @@ public class FabricKnittingView4 extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
+        /*
+        FabricDyeing5Dao fabricDyeing5Dao = new FabricDyeing5DaoImpl();
+        FabricDyeing5 fabricDyeing5 = new FabricDyeing5(txtFabricName.getText().trim(), Integer.parseInt(txtFabricQty.getText().trim()), Double.parseDouble(txtHight.getText().trim()), Double.parseDouble(txtWidth.getText().trim()), txtColorName.getText().trim(), new Date());
+        fabricDyeing5Dao.save(fabricDyeing5);
+        displayIntoTable();
+        */
         FabricKnitting4Dao fabricKnitting4Dao = new FabricKnitting4DaoImpl();
         FabricKnitting4 fabricKnitting4 = new FabricKnitting4(txtFabricName.getText().trim(), Integer.parseInt(txtFabricQty.getText().trim()), Double.parseDouble(txtHeight.getText().trim()), Double.parseDouble(txtWidth.getText().trim()), txtColorName.getText().trim(), new Date());
-       fabricKnitting4Dao.save(fabricKnitting4);
+        fabricKnitting4Dao.save(fabricKnitting4);
         displayIntoTable();
 
     }//GEN-LAST:event_btnSubmitActionPerformed

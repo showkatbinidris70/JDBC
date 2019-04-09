@@ -102,6 +102,5 @@ public class FabricKnitting4 {
         this.deliveryDate = deliveryDate;
     }
 
-    
-    
+   
 }

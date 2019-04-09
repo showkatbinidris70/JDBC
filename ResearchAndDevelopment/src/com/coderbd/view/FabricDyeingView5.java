@@ -33,12 +33,13 @@ public class FabricDyeingView5 extends javax.swing.JFrame {
     }
 
     public void displayIntoTable() {
+       
         createTable();
         FabricDyeing5Dao fabricDyeing5Dao = new FabricDyeing5DaoImpl();
-        // buyingThread2Dao.ctreateTable();
+        fabricDyeing5Dao.ctreateTable();
         List<FabricDyeing5> list = fabricDyeing5Dao.getList();
         DefaultTableModel model = (DefaultTableModel) tblDisplayFabricDyeing.getModel();
-        Object[] row = new Object[8];
+        Object[] row = new Object[7];
         for (int i = 0; i < list.size(); i++) {
             row[0] = list.get(i).getId();
             row[1] = list.get(i).getFabricName();
@@ -88,7 +89,7 @@ public class FabricDyeingView5 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel1.setText("                       Research & Development(RND)Department                                       5");
+        jLabel1.setText("                       Research & Development(RND)Department                                       ");
 
         tblDisplayFabricDyeing.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -281,9 +282,10 @@ public class FabricDyeingView5 extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
+
         FabricDyeing5Dao fabricDyeing5Dao = new FabricDyeing5DaoImpl();
         FabricDyeing5 fabricDyeing5 = new FabricDyeing5(txtFabricName.getText().trim(), Integer.parseInt(txtFabricQty.getText().trim()), Double.parseDouble(txtHight.getText().trim()), Double.parseDouble(txtWidth.getText().trim()), txtColorName.getText().trim(), new Date());
-        fabricDyeing5.save(fabricDyeing5);
+        fabricDyeing5Dao.save(fabricDyeing5);
         displayIntoTable();
     }//GEN-LAST:event_btnSubmitActionPerformed
 
