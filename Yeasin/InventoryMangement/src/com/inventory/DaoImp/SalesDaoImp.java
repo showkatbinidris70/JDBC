@@ -20,7 +20,7 @@ import java.util.List;
  * @author Md Yasin Arif
  */
 public class SalesDaoImp implements ProductDao{
-        Connection con = DBConnection.getConnect();
+        Connection con = DBConnection.getDBConn();
         public static void main(String[] args) {
         SalesDaoImp obj = new SalesDaoImp();
         obj.createTable();

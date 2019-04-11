@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.inventory.Connection;
+package com.coderbd.conn;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,26 +11,24 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-
 /**
  *
  * @author User
  */
-public class DBConnection {
-    
-    public static void main(String[] args) {
-        DBConnection.getDBConn();
-    }
+public class ConnectDB {
+
     static Connection conn = null;
 
-    public static Connection getDBConn() {
-        Connection conn = null;
+    public static void main(String[] args) {
+        ConnectDB.getDBConnection();
+    }
+
+    public static Connection getDBConnection() {
         try {
-            conn =  DriverManager.getConnection("jdbc:mysql://localhost:3306/showkat", "root", "1234");
-            System.out.println("Database Connected");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/showkat", "root", "1234");
+            System.out.println("DBConnection");
         } catch (SQLException ex) {
-            Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnectDB.class.getName()).log(Level.SEVERE, null, ex);
         }
         return conn;
     }

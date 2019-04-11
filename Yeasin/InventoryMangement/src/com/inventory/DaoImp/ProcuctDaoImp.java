@@ -20,7 +20,12 @@ import java.util.List;
  * @author Md Yasin Arif
  */
 public class ProcuctDaoImp implements ProductDao{
-        Connection con = DBConnection.getConnect();
+        Connection con = DBConnection.getDBConn();
+        public static void main(String[] args) {
+        
+            ProcuctDaoImp pdi= new ProcuctDaoImp();
+            pdi.createTable();
+    }
 //        public static void main(String[] args) {
 //        ProcuctDaoImp obj = new ProcuctDaoImp();
 //        obj.createTable();

@@ -22,7 +22,7 @@ import java.util.List;
  */
 public class SummaryDaoImp implements SummaryDao {
 
-    Connection con = DBConnection.getConnect();
+    Connection con = DBConnection.getDBConn();
 
     public static void main(String[] args) {
         SummaryDaoImp obj = new SummaryDaoImp();
