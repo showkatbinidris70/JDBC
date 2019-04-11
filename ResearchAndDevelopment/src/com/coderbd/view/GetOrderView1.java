@@ -6,8 +6,11 @@
 package com.coderbd.view;
 
 import com.coderbd.dao.GetOrderDao1;
+import com.coderbd.dao.SummaryDao;
 import com.coderbd.daoImpl.GetOrderDao1Impl;
+import com.coderbd.daoImpl.SummaryDaoImpl;
 import com.coderbd.pojo.GetOrder1;
+import com.coderbd.pojo.Summary;
 import java.util.Date;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
@@ -43,7 +46,7 @@ public class GetOrderView1 extends javax.swing.JFrame {
             row[2] = list.get(i).getProductQuantity();
             row[3] = list.get(i).getUnitPrice();
             row[4] = list.get(i).getTotalPrice();
-            row[5] = list.get(i).getCurrentDate();
+            row[5] = list.get(i).getorderDate();
             row[6] = list.get(i).getDeliveryDate();
             model.addRow(row);
         }
@@ -304,7 +307,28 @@ public class GetOrderView1 extends javax.swing.JFrame {
         GetOrderDao1 gdao = new GetOrderDao1Impl();
         GetOrder1 order = new GetOrder1(txtOrderCode.getText().trim(), Integer.parseInt(txtProductQty.getText().trim()), Double.parseDouble(txtUnitPrice.getText().trim()), Double.parseDouble(txtTotalPrice.getText().trim()), new Date(), new Date());
         gdao.save(order);
+        
+        
+        /*
+           SummaryDao summaryDao = new SummaryDaoImpl();
+        
+         Product product1 = productDao.getProductByProductCode(product.getProductCode());
+            Summary summary = new Summary(txtProCode.getText().trim(), txtProCode.getText().trim(),
+                    Integer.parseInt(txtQty.getText().trim()), 0, Integer.parseInt(txtQty.getText().trim()),
+                    product1);
+            summaryDao.save(summary);
+        */
+        
+        SummaryDao sdao = new SummaryDaoImpl();
+      //  GetOrder1 gorder = GetOrderDao1.
+        
+      //  Summary summary = new Summary
+        
+        
         displayIntoTable();
+        
+      //  SummaryDao dao = new SummaryDaoImpl();
+      //  Summary summary = new Summary(new Date(), txtProductQty.getText(),txtProductQty.getText());
 
 
     }//GEN-LAST:event_btnSubmitOrderActionPerformed

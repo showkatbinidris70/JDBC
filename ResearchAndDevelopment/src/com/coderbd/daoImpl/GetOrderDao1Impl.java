@@ -12,10 +12,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author User
- */
 public class GetOrderDao1Impl implements GetOrderDao1 {
 
     static Connection conn = ProductBDConnection.getConnection();
@@ -48,8 +44,8 @@ public class GetOrderDao1Impl implements GetOrderDao1 {
             pstm.setInt(2, g.getProductQuantity());
             pstm.setDouble(3, g.getUnitPrice());
             pstm.setDouble(4, g.getTotalPrice());
-            pstm.setDate(5, new java.sql.Date(g.getCurrentDate().getTime()));
-            pstm.setDate(6, new java.sql.Date(g.getCurrentDate().getTime()));
+            pstm.setDate(5, new java.sql.Date(g.getorderDate().getTime()));
+            pstm.setDate(6, new java.sql.Date(g.getorderDate().getTime()));
             pstm.executeUpdate();
             System.out.println("Insert success into order table");
 
@@ -69,8 +65,8 @@ public class GetOrderDao1Impl implements GetOrderDao1 {
             pstm.setInt(2, g.getProductQuantity());
             pstm.setDouble(3, g.getUnitPrice());
             pstm.setDouble(4, g.getTotalPrice());
-            pstm.setDate(5, new java.sql.Date(g.getCurrentDate().getTime()));
-            pstm.setDate(6, new java.sql.Date(g.getCurrentDate().getTime()));
+            pstm.setDate(5, new java.sql.Date(g.getorderDate().getTime()));
+            pstm.setDate(6, new java.sql.Date(g.getorderDate().getTime()));
             pstm.executeUpdate();
             System.out.println(" update success !");
 

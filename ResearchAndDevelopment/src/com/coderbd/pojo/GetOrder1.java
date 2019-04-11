@@ -1,25 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.coderbd.pojo;
 
 import java.util.Date;
 
 
-
-/**
- *
- * @author User
- */
 public class GetOrder1 {
     private int id;
     private String orderCode;
     private int productQuantity;
     private double unitPrice;
     private double totalPrice;
-    private Date currentDate;
+    private Date orderDate;
     private Date deliveryDate;
 
     public GetOrder1() {
@@ -31,7 +22,7 @@ public class GetOrder1 {
         this.productQuantity = productQuantity;
         this.unitPrice = unitPrice;
         this.totalPrice = totalPrice;
-        this.currentDate = currentDate;
+        this.orderDate = currentDate;
         this.deliveryDate = deliveryDate;
     }
 
@@ -40,7 +31,7 @@ public class GetOrder1 {
         this.productQuantity = productQuantity;
         this.unitPrice = unitPrice;
         this.totalPrice = totalPrice;
-        this.currentDate = currentDate;
+        this.orderDate = currentDate;
         this.deliveryDate = deliveryDate;
     }
 
@@ -84,12 +75,12 @@ public class GetOrder1 {
         this.totalPrice = totalPrice;
     }
 
-    public Date getCurrentDate() {
-        return currentDate;
+    public Date getorderDate() {
+        return orderDate;
     }
 
-    public void setCurrentDate(Date currentDate) {
-        this.currentDate = currentDate;
+    public void setorderDate(Date currentDate) {
+        this.orderDate = currentDate;
     }
 
     public Date getDeliveryDate() {

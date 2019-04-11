@@ -147,24 +147,23 @@ public class MainPageView extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSubmitOrder5)
-                            .addComponent(btnSubmitOrder1)
-                            .addComponent(btnSubmitOrder2))
-                        .addGap(252, 252, 252)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnUpdateOrder)
-                            .addComponent(btnSubmitOrder3)
-                            .addComponent(btnSubmitOrder)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(btnUpdateOrder1)
-                        .addGap(263, 263, 263)
-                        .addComponent(btnSubmitOrder4)))
+                .addGap(58, 58, 58)
+                .addComponent(btnUpdateOrder1)
+                .addGap(263, 263, 263)
+                .addComponent(btnSubmitOrder4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSubmitOrder5)
+                    .addComponent(btnSubmitOrder)
+                    .addComponent(btnSubmitOrder1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSubmitOrder3)
+                    .addComponent(btnUpdateOrder)
+                    .addComponent(btnSubmitOrder2))
+                .addGap(241, 241, 241))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,17 +173,17 @@ public class MainPageView extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(28, 28, 28)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSubmitOrder)
-                    .addComponent(btnSubmitOrder5))
-                .addGap(40, 40, 40)
+                    .addComponent(btnSubmitOrder5)
+                    .addComponent(btnSubmitOrder3))
+                .addGap(59, 59, 59)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSubmitOrder1)
-                    .addComponent(btnSubmitOrder3))
-                .addGap(41, 41, 41)
+                    .addComponent(btnSubmitOrder2))
+                .addGap(59, 59, 59)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUpdateOrder)
-                    .addComponent(btnSubmitOrder2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                    .addComponent(btnSubmitOrder))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSubmitOrder4)
                     .addComponent(btnUpdateOrder1))
@@ -215,7 +214,7 @@ public class MainPageView extends javax.swing.JFrame {
 
     private void btnUpdateOrder1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateOrder1ActionPerformed
         // TODO add your handling code here:
-        new LoginView().setVisible(true);
+        new LoginAdmin().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnUpdateOrder1ActionPerformed
 
@@ -251,7 +250,7 @@ public class MainPageView extends javax.swing.JFrame {
 
     private void btnSubmitOrder4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitOrder4ActionPerformed
         // TODO add your handling code here:
-        new Summary().setVisible(true);
+        new SummaryView().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnSubmitOrder4ActionPerformed
 

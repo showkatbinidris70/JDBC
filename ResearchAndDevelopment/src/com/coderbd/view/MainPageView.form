@@ -69,29 +69,26 @@
                   </Group>
               </Group>
               <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="btnUpdateOrder1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="263" max="-2" attributes="0"/>
+                  <Component id="btnSubmitOrder4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnSubmitOrder5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnSubmitOrder1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnSubmitOrder2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="252" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnUpdateOrder" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnSubmitOrder3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnSubmitOrder" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                          <Component id="btnUpdateOrder1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="263" max="-2" attributes="0"/>
-                          <Component id="btnSubmitOrder4" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="btnSubmitOrder5" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSubmitOrder" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSubmitOrder1" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btnSubmitOrder3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnUpdateOrder" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSubmitOrder2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="241" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -103,20 +100,20 @@
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnSubmitOrder" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnSubmitOrder5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnSubmitOrder1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnSubmitOrder3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnUpdateOrder" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSubmitOrder1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnSubmitOrder2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="86" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnUpdateOrder" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSubmitOrder" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="49" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnSubmitOrder4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnUpdateOrder1" alignment="3" min="-2" max="-2" attributes="0"/>
