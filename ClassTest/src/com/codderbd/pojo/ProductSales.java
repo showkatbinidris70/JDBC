@@ -8,7 +8,6 @@ package com.codderbd.pojo;
 import java.sql.Date;
 
 /**
- *
  * @author User
  */
 public class ProductSales {
@@ -38,8 +37,7 @@ public class ProductSales {
         this.product = product;
     }
 
-    
-    
+
     public ProductSales(int id, String productName, String productCode, int qty, double unitPrice, double totalPrice, Date salesDate, Product product) {
         this.id = id;
         this.productName = productName;
@@ -114,8 +112,6 @@ public class ProductSales {
     public void setProduct(Product product) {
         this.product = product;
     }
-    
-    
-    
-    
+
+
 }

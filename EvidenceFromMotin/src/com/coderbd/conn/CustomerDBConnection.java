@@ -13,11 +13,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class CustomerDBConnection {
-//
+    //
 //    static Connection conn = null;
 //
 //    public static Connection getDBConnection() {

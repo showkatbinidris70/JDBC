@@ -12,7 +12,7 @@ public class Patient {
     private Date admitedDate;
     private String mobile;
     private double payingBills;
-    private Date releaseDate;    
+    private Date releaseDate;
     Medical medical;
 
     public Patient() {
@@ -21,7 +21,7 @@ public class Patient {
     public Patient(int id) {
         this.id = id;
     }
-    
+
     public Patient(int id, String name, int age, String diseaseType, String address, Date admitedDate, String mobile, double payingBills, Date releaseDate, Medical medical) {
         this.id = id;
         this.name = name;
@@ -135,8 +135,5 @@ public class Patient {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-  
-    
-    
 
 }

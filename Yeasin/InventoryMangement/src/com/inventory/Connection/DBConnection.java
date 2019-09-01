@@ -12,22 +12,21 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-
 /**
- *
  * @author User
  */
 public class DBConnection {
-    
+
     public static void main(String[] args) {
         DBConnection.getDBConn();
     }
+
     static Connection conn = null;
 
     public static Connection getDBConn() {
         Connection conn = null;
         try {
-            conn =  DriverManager.getConnection("jdbc:mysql://localhost:3306/showkat", "root", "1234");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/showkat", "root", "1234");
             System.out.println("Database Connected");
         } catch (SQLException ex) {
             Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);

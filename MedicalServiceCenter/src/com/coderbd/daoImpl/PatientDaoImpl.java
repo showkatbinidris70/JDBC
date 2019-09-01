@@ -4,6 +4,7 @@ import com.coderbd.conn.CustomDBConnection;
 import com.coderbd.dao.PatientDao;
 import com.coderbd.pojo.Medical;
 import com.coderbd.pojo.Patient;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -98,7 +99,7 @@ public class PatientDaoImpl implements PatientDao {
 
     @Override
     public Patient getPatientById(int id) {
-         Medical medical = new Medical();
+        Medical medical = new Medical();
         Patient patient = new Patient();
         String sql = "select * from patient where id=?";
         try {
@@ -111,7 +112,7 @@ public class PatientDaoImpl implements PatientDao {
         String mobile, double payingBills, Date releaseDate, Medical medical)      
                  */
                 patient.setId(rs.getInt(1));
-                 patient.setId(rs.getInt(1));
+                patient.setId(rs.getInt(1));
                 pstmt.setString(1, patient.getName());
                 pstmt.setInt(2, patient.getAge());
                 pstmt.setString(3, patient.getDiseaseType());

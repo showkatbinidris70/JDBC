@@ -11,7 +11,7 @@ public class Summary {
     private int totalQty;
     private int soldQty;
     private int availableQty;
-    private Product product; 
+    private Product product;
 
     public Summary() {
     }
@@ -97,8 +97,6 @@ public class Summary {
     public void setProduct(Product product) {
         this.product = product;
     }
-    
-    
-    
-    
+
+
 }

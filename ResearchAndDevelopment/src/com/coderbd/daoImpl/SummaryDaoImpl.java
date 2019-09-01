@@ -8,6 +8,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.ProductBDConnection;
 import com.coderbd.dao.SummaryDao;
 import com.coderbd.pojo.Summary;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +19,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class SummaryDaoImpl implements SummaryDao {
@@ -54,7 +54,7 @@ public class SummaryDaoImpl implements SummaryDao {
             pstm.setInt(5, s.getFinishing());
             pstm.setInt(6, s.getCompletedProduct());
             pstm.setDate(7, new java.sql.Date(s.getOrderDate().getTime()));
-            pstm.setDate(8, new java.sql.Date(s.getDeliveryDate().getTime()));
+            pstm.setString(8, s.getDeliveryDate());
             pstm.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(SummaryDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -75,7 +75,7 @@ public class SummaryDaoImpl implements SummaryDao {
             pstm.setString(1, code);
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
-                summari = new Summary(rs.getString(1), rs.getInt(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getDate(7), rs.getDate(8));
+                summari = new Summary(rs.getString(1), rs.getInt(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getDate(7), rs.getString(8));
             }
         } catch (SQLException ex) {
             Logger.getLogger(SummaryDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -91,7 +91,7 @@ public class SummaryDaoImpl implements SummaryDao {
             PreparedStatement pstm = conn.prepareStatement(sql);
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
-                Summary summary = new Summary(rs.getString(1), rs.getInt(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getDate(7), rs.getDate(8));
+                Summary summary = new Summary(rs.getString(1), rs.getInt(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getDate(7), rs.getString(8));
                 list.add(summary);
             }
         } catch (SQLException ex) {

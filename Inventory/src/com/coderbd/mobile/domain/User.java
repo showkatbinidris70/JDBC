@@ -6,11 +6,10 @@
 package com.coderbd.mobile.domain;
 
 /**
- *
  * @author User
  */
 public class User {
-     private int id;
+    private int id;
     private String name;
     private String email;
     private String mobile;
@@ -86,6 +85,6 @@ public class User {
         this.password = password;
         this.userType = userType;
     }
-    
-    
+
+
 }

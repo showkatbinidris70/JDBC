@@ -6,14 +6,14 @@
 package com.codderbd.dao;
 
 import com.codderbd.pojo.User;
+
 import java.util.List;
 
 /**
- *
  * @author User
  */
 public interface UserDao {
-     void createTable();
+    void createTable();
 
     void save(User user);
 

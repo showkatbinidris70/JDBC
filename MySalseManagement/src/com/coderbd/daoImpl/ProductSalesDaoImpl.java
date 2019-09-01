@@ -5,6 +5,7 @@ import com.coderbd.conn.CustomDBConnection;
 import com.coderbd.dao.ProductSalesDao;
 import com.coderbd.pojo.Product;
 import com.coderbd.pojo.ProductSales;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,7 +17,7 @@ import java.util.logging.Logger;
 
 
 public class ProductSalesDaoImpl implements ProductSalesDao {
-    
+
     Connection conn = CustomDBConnection.getDBConnection();
 
     public static void main(String[] args) {
@@ -30,8 +31,7 @@ public class ProductSalesDaoImpl implements ProductSalesDao {
                 + " primary key, product_name varchar(50),product_code varchar(30),"
                 + "qty int(11),unit_price double,total_price double, sales_date date,"
                 + " p_id int(11),FOREIGN KEY (p_id) REFERENCES product(id))";
-        try 
-        {
+        try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.execute();
             System.out.println("Table Created!");
@@ -42,8 +42,8 @@ public class ProductSalesDaoImpl implements ProductSalesDao {
 
     @Override
     public void save(ProductSales ps) {
-    String sql = "insert into sales(product_name,product_code,qty,unit_price,"
-            + "total_price,sales_date,p_id) values(?,?,?,?,?,?,?)";
+        String sql = "insert into sales(product_name,product_code,qty,unit_price,"
+                + "total_price,sales_date,p_id) values(?,?,?,?,?,?,?)";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, ps.getProductName());
@@ -72,7 +72,7 @@ public class ProductSalesDaoImpl implements ProductSalesDao {
 
     @Override
     public ProductSales getProductSalesByProductCode(String code) {
-      ProductSales product = null;
+        ProductSales product = null;
         String sql = "select * from sales where product_code=?";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
@@ -96,7 +96,7 @@ public class ProductSalesDaoImpl implements ProductSalesDao {
 
     @Override
     public List<ProductSales> getList() {
-     List<ProductSales> list = new ArrayList();
+        List<ProductSales> list = new ArrayList();
         String sql = "select * from sales";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -109,7 +109,7 @@ public class ProductSalesDaoImpl implements ProductSalesDao {
             Logger.getLogger(ProductSalesDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         return list;
-    
+
     }
-    
+
 }

@@ -7,10 +7,10 @@ package com.coderbd.mobile.dao;
 
 
 import com.coderbd.mobile.domain.User;
+
 import java.util.List;
 
 /**
- *
  * @author Rajaul Islam
  */
 public interface UserDao {
@@ -24,6 +24,6 @@ public interface UserDao {
     List<User> getList();
 
     User getUser(int id);
-    
-     User getUserByUsername(String username);
+
+    User getUserByUsername(String username);
 }

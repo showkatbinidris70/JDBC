@@ -1,74 +1,66 @@
 <HTML>
 <HEAD>
 
-<TITLE>Zoom</TITLE>
+    <TITLE>Zoom</TITLE>
 
-<script LANGUAGE="JavaScript1.2" SRC="quiz.js" TYPE="text/javascript"></script>
-<SCRIPT>
-var g_bLMS = false;
-var g_bAOSupport = false;
-var g_oZoomInfo = window.opener.g_oZoomInfo;
-</SCRIPT>
-<HEAD>
+    <script LANGUAGE="JavaScript1.2" SRC="quiz.js" TYPE="text/javascript"></script>
+    <SCRIPT>
+        var g_bLMS = false;
+        var g_bAOSupport = false;
+        var g_oZoomInfo = window.opener.g_oZoomInfo;
+    </SCRIPT>
+    <HEAD>
 <BODY marginheight="0" marginwidth="0" topmargin="0" leftmargin="0">
 
 <SCRIPT>
 
-function ShowImage(strFileName)
-{
-	document.write("<img src='"+ strFileName + "'/>");
-}
+    function ShowImage(strFileName) {
+        document.write("<img src='" + strFileName + "'/>");
+    }
 
-function ShowSWF(strFileName)
-{
-	WriteSwfObject(strFileName, "100%", "100%", "show all", "", "best", "#ffffff", "")
-}
+    function ShowSWF(strFileName) {
+        WriteSwfObject(strFileName, "100%", "100%", "show all", "", "best", "#ffffff", "")
+    }
 
-function Zoom()
-{
-	var strFileName = g_oZoomInfo.strFileName;
-	var strExt = "";
+    function Zoom() {
+        var strFileName = g_oZoomInfo.strFileName;
+        var strExt = "";
 
 
-	strExt = strFileName.substr(strFileName.lastIndexOf("."));
-	strExt = strExt.toLowerCase();
+        strExt = strFileName.substr(strFileName.lastIndexOf("."));
+        strExt = strExt.toLowerCase();
 
-	// strFileName = RemoveFolder(strFileName);
+        // strFileName = RemoveFolder(strFileName);
 
-	if (strExt == ".swf")
-	{
-		ShowSWF(strFileName);
-	}
-	else
-	{
-		ShowImage(strFileName);
-	}
-}
+        if (strExt == ".swf") {
+            ShowSWF(strFileName);
+        }
+        else {
+            ShowImage(strFileName);
+        }
+    }
 
-function RemoveFolder(strPath)
-{
-	var strResult = strPath;
-	var nPos = -1;
-	var nPos2 = -1;
+    function RemoveFolder(strPath) {
+        var strResult = strPath;
+        var nPos = -1;
+        var nPos2 = -1;
 
-	nPos = strResult.lastIndexOf("\\");
-	nPos2 = strResult.lastIndexOf("/");
+        nPos = strResult.lastIndexOf("\\");
+        nPos2 = strResult.lastIndexOf("/");
 
-	if (nPos2 > nPos)
-	{
-		nPos = nPos2;
-	}
+        if (nPos2 > nPos) {
+            nPos = nPos2;
+        }
 
-	if (nPos >= 0)
-	{
-		strResult = strResult.substr(nPos + 1);
-	}
+        if (nPos >= 0) {
+            strResult = strResult.substr(nPos + 1);
+        }
 
-	return strResult;
-}
+        return strResult;
+    }
 
 
-Zoom();
+    Zoom();
 
 
 </SCRIPT>

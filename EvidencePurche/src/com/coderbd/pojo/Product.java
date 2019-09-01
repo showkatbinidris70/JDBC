@@ -6,7 +6,6 @@
 package com.coderbd.pojo;
 
 /**
- *
  * @author User
  */
 public class Product {

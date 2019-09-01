@@ -6,14 +6,14 @@
 package com.coderbd.mobile.dao;
 
 import com.coderbd.mobile.domain.ProductSales;
+
 import java.util.List;
 
 /**
- *
  * @author User
  */
 public interface ProductSalesDao {
-     void save(ProductSales s);
+    void save(ProductSales s);
 
     void update(ProductSales s);
 

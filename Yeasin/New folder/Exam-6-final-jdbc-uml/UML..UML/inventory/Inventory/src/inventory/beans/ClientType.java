@@ -17,15 +17,14 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- *
  * @author user
  */
 @Entity
 @Table(name = "client_type")
 @NamedQueries({
-    @NamedQuery(name = "ClientType.findAll", query = "SELECT c FROM ClientType c"),
-    @NamedQuery(name = "ClientType.findByClientTypeId", query = "SELECT c FROM ClientType c WHERE c.clientTypeId = :clientTypeId"),
-    @NamedQuery(name = "ClientType.findByClientTitle", query = "SELECT c FROM ClientType c WHERE c.clientTitle = :clientTitle")})
+        @NamedQuery(name = "ClientType.findAll", query = "SELECT c FROM ClientType c"),
+        @NamedQuery(name = "ClientType.findByClientTypeId", query = "SELECT c FROM ClientType c WHERE c.clientTypeId = :clientTypeId"),
+        @NamedQuery(name = "ClientType.findByClientTitle", query = "SELECT c FROM ClientType c WHERE c.clientTitle = :clientTitle")})
 public class ClientType implements Serializable {
     @OneToMany(mappedBy = "clientType")
     private List<Client> clientList;

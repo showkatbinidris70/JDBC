@@ -6,10 +6,10 @@
 package com.coderbd.inventory.dao;
 
 import com.coderbd.inventory.domain.OrderAlertSettings;
+
 import java.util.List;
 
 /**
- *
  * @author Rajaul Islam
  */
 public interface OrderAlertSettingsDao {
@@ -18,6 +18,6 @@ public interface OrderAlertSettingsDao {
 
     void update(OrderAlertSettings s);
 
-     public List<OrderAlertSettings> getList();
+    public List<OrderAlertSettings> getList();
 
 }

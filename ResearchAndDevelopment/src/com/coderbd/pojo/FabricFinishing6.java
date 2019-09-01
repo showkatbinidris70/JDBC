@@ -16,12 +16,12 @@ public class FabricFinishing6 {
     private double height;
     private double width;
     private String colorName;
-    private Date deliveryDate;
+    private String deliveryDate;
 
     public FabricFinishing6() {
     }
 
-    public FabricFinishing6(int id, String FabricName, String finishingName, int FabricQuantity, double height, double width, String colorName, Date deliveryDate) {
+    public FabricFinishing6(int id, String FabricName, String finishingName, int FabricQuantity, double height, double width, String colorName, String deliveryDate) {
         this.id = id;
         this.FabricName = FabricName;
         this.finishingName = finishingName;
@@ -32,7 +32,7 @@ public class FabricFinishing6 {
         this.deliveryDate = deliveryDate;
     }
 
-    public FabricFinishing6(String FabricName, String finishingName, int FabricQuantity, double height, double width, String colorName, Date deliveryDate) {
+    public FabricFinishing6(String FabricName, String finishingName, int FabricQuantity, double height, double width, String colorName, String deliveryDate) {
         this.FabricName = FabricName;
         this.finishingName = finishingName;
         this.FabricQuantity = FabricQuantity;
@@ -98,17 +98,17 @@ public class FabricFinishing6 {
         this.colorName = colorName;
     }
 
-    public Date getDeliveryDate() {
+    public String getDeliveryDate() {
         return deliveryDate;
     }
 
-    public void setDeliveryDate(Date deliveryDate) {
+    public void setDeliveryDate(String deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
 
     public void save(FabricFinishing6 fabricFinishing6) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-   
+
+
 }

@@ -20,17 +20,16 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- *
  * @author user
  */
 @Entity
 @Table(name = "stock")
 @NamedQueries({
-    @NamedQuery(name = "Stock.findAll", query = "SELECT s FROM Stock s"),
-    @NamedQuery(name = "Stock.findByStockId", query = "SELECT s FROM Stock s WHERE s.stockId = :stockId"),
-    @NamedQuery(name = "Stock.findByProductId", query = "SELECT s FROM Stock s WHERE s.productId = :productId"),
-    @NamedQuery(name = "Stock.findByStock", query = "SELECT s FROM Stock s WHERE s.stock = :stock"),
-    @NamedQuery(name = "Stock.findByStocklevel", query = "SELECT s FROM Stock s WHERE s.stocklevel = :stocklevel")})
+        @NamedQuery(name = "Stock.findAll", query = "SELECT s FROM Stock s"),
+        @NamedQuery(name = "Stock.findByStockId", query = "SELECT s FROM Stock s WHERE s.stockId = :stockId"),
+        @NamedQuery(name = "Stock.findByProductId", query = "SELECT s FROM Stock s WHERE s.productId = :productId"),
+        @NamedQuery(name = "Stock.findByStock", query = "SELECT s FROM Stock s WHERE s.stock = :stock"),
+        @NamedQuery(name = "Stock.findByStocklevel", query = "SELECT s FROM Stock s WHERE s.stocklevel = :stocklevel")})
 public class Stock implements Serializable {
     @JoinColumn(name = "productId", referencedColumnName = "productId")
     @ManyToOne

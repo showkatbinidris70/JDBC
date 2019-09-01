@@ -8,6 +8,7 @@ package com.codder.bd.daoImp;
 import com.codder.bd.conn.CustomDBConnection;
 import com.codder.bd.dao.RoleDao;
 import com.codder.bd.pojo.Role;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -16,15 +17,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-
-
-
 /**
- *
  * @author User
  */
-public class RoleDaoImp implements RoleDao{
+public class RoleDaoImp implements RoleDao {
     Connection conn = CustomDBConnection.getConnect();
+
     @Override
     public void createTable() {
         //make quarry
@@ -40,9 +38,9 @@ public class RoleDaoImp implements RoleDao{
 
     @Override
     public void insert(Role role) {
-       // make quary
-       String sql = "insert into test values(?,?)";
-       PreparedStatement pstm;
+        // make quary
+        String sql = "insert into test values(?,?)";
+        PreparedStatement pstm;
         try {
             pstm = conn.prepareStatement(sql);
             pstm.setInt(1, role.getId());
@@ -78,6 +76,6 @@ public class RoleDaoImp implements RoleDao{
     public List<Role> getRoles() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-   
-    
+
+
 }

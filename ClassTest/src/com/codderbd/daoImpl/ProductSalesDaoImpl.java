@@ -8,6 +8,7 @@ package com.codderbd.daoImpl;
 import com.codderbd.conn.CustomDBConnection;
 import com.codderbd.pojo.Product;
 import com.codderbd.pojo.ProductSales;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +19,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class ProductSalesDaoImpl {

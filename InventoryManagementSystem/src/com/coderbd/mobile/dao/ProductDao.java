@@ -6,10 +6,10 @@
 package com.coderbd.mobile.dao;
 
 import com.coderbd.mobile.domain.Product;
+
 import java.util.List;
 
 /**
- *
  * @author Rajaul Islam
  */
 public interface ProductDao {

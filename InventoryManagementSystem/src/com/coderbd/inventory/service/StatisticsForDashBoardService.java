@@ -6,6 +6,7 @@ import com.coderbd.inventory.domain.StockSummary;
 import com.coderbd.mobile.conn.MySqlDbConnection;
 import com.coderbd.mobile.domain.Product;
 import com.coderbd.mobile.service.ProductService;
+
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -13,7 +14,6 @@ import java.util.List;
 import java.util.Set;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class StatisticsForDashBoardService implements StatisticsForDashBoardDao {
@@ -52,11 +52,11 @@ public class StatisticsForDashBoardService implements StatisticsForDashBoardDao 
                 itemOut += stockSummary.getSoldQty();
                 itemAvailable += stockSummary.getAvilableQty();
 
-            } else if(p.getCategory().equals(statistics.getBrandOrCategory()))  {
+            } else if (p.getCategory().equals(statistics.getBrandOrCategory())) {
                 itemIn += stockSummary.getPurchaseQty();
                 itemOut += stockSummary.getSoldQty();
                 itemAvailable += stockSummary.getAvilableQty();
-            } else if (p.getCategory().equals(statistics.getBrandOrCategory()))  {
+            } else if (p.getCategory().equals(statistics.getBrandOrCategory())) {
                 itemIn += stockSummary.getPurchaseQty();
                 itemOut += stockSummary.getSoldQty();
                 itemAvailable += stockSummary.getAvilableQty();

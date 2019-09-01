@@ -8,13 +8,11 @@ package com.codder.bd.test;
 import com.codder.bd.conn.CustomDBConnection;
 
 
-
 /**
- *
  * @author User
  */
 public class TestConnection {
- 
+
     public static void main(String[] args) {
         CustomDBConnection.getConnect();
     }

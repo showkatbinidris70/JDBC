@@ -1,7 +1,6 @@
 package com.coderbd.mobile.domain;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class Product {
@@ -14,7 +13,7 @@ public class Product {
     private double totalPrice;
     private String category;
     private String purchaseDate;
- 
+
     public Product() {
     }
 
@@ -24,7 +23,7 @@ public class Product {
         this.unitPrice = unitPrice;
         this.qty = qty;
         this.totalPrice = totalPrice;
-         this.category = category;
+        this.category = category;
         this.purchaseDate = purchaseDate;
     }
 
@@ -52,7 +51,7 @@ public class Product {
         return totalPrice;
     }
 
-   
+
     public String getCategory() {
         return category;
     }
@@ -93,6 +92,5 @@ public class Product {
         this.purchaseDate = purchaseDate;
     }
 
-   
-    
+
 }

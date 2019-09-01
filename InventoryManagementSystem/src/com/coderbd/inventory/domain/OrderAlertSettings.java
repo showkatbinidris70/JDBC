@@ -1,7 +1,6 @@
 package com.coderbd.inventory.domain;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class OrderAlertSettings {

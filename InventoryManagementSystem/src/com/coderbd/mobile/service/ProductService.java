@@ -3,6 +3,7 @@ package com.coderbd.mobile.service;
 import com.coderbd.mobile.conn.MySqlDbConnection;
 import com.coderbd.mobile.dao.ProductDao;
 import com.coderbd.mobile.domain.Product;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,7 +14,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class ProductService implements ProductDao {

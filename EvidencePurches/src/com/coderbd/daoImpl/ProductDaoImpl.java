@@ -8,6 +8,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.DataConnection;
 import com.coderbd.dao.ProductDao;
 import com.coderbd.pojo.Product;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -16,7 +17,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class ProductDaoImpl implements ProductDao {
@@ -38,9 +38,9 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public void save(Product p) {
-       // String sql = "insert into purchProduct(product_name,product_code,quantity,unit_price,total_price) values (?,?,?,?,?)";
+        // String sql = "insert into purchProduct(product_name,product_code,quantity,unit_price,total_price) values (?,?,?,?,?)";
         try {
-             String sql = "insert into productTable(product_name,product_code,quantiry,unit_Price,total_price) values (?,?,?,?,?)";
+            String sql = "insert into productTable(product_name,product_code,quantiry,unit_Price,total_price) values (?,?,?,?,?)";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, p.getProductName());
             pstm.setString(2, p.getProductCode());

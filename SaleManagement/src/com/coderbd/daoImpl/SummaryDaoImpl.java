@@ -4,6 +4,7 @@ import com.coderbd.conn.CustomDBConnection;
 import com.coderbd.dao.SummaryDao;
 import com.coderbd.pojo.Product;
 import com.coderbd.pojo.Summary;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -55,11 +56,11 @@ public class SummaryDaoImpl implements SummaryDao {
         String sql = "update summary set total_qty=?,sold_qty=?,available_qty=? where product_code=?";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
-           
+
             pstm.setInt(1, s.getTotalQty());
             pstm.setInt(2, s.getSoldQty());
             pstm.setInt(3, s.getAvailableQty());
-            pstm.setString(4, s.getProductCode());          
+            pstm.setString(4, s.getProductCode());
             pstm.executeUpdate();
             System.out.println("Update success!");
         } catch (SQLException ex) {

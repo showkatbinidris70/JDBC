@@ -8,6 +8,7 @@ package com.codderbd.daoImpl;
 import com.codderbd.conn.CustomDBConnection;
 import com.codderbd.pojo.Product;
 import com.codderbd.pojo.Summary;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +19,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class SummaryDaoImpl {
@@ -59,11 +59,11 @@ public class SummaryDaoImpl {
         String sql = "update summary set total_qty=?,sold_qty=?,available_qty=? where product_code=?";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
-           
+
             pstm.setInt(1, s.getTotalQty());
             pstm.setInt(2, s.getSoldQty());
             pstm.setInt(3, s.getAvailableQty());
-            pstm.setString(4, s.getProductCode());          
+            pstm.setString(4, s.getProductCode());
             pstm.executeUpdate();
             System.out.println("Update success!");
         } catch (SQLException ex) {

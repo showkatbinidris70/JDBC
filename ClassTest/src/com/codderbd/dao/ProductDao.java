@@ -6,14 +6,14 @@
 package com.codderbd.dao;
 
 import com.codderbd.pojo.Product;
+
 import java.util.List;
 
 /**
- *
  * @author User
  */
 public interface ProductDao {
-     void createTable();
+    void createTable();
 
     void save(Product p);
 

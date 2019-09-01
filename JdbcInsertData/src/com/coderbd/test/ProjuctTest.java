@@ -8,7 +8,6 @@ package com.coderbd.test;
 import com.coderbd.conn.DBConnection;
 
 /**
- *
  * @author User
  */
 public class ProjuctTest {

@@ -8,7 +8,6 @@ package com.inventory.pojo;
 import java.sql.Date;
 
 /**
- *
  * @author Md Yasin Arif
  */
 public class Product {
@@ -102,13 +101,5 @@ public class Product {
         this.totalAmount = totalAmount;
     }
 
-    
 
-    
-
-    
-
-    
-    
-    
 }

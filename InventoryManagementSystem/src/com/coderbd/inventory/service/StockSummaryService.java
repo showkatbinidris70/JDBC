@@ -3,6 +3,7 @@ package com.coderbd.inventory.service;
 import com.coderbd.mobile.conn.MySqlDbConnection;
 import com.coderbd.inventory.domain.StockSummary;
 import com.coderbd.mobile.domain.User;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,10 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import com.coderbd.inventory.dao.StockSummaryDao;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class StockSummaryService implements StockSummaryDao {
@@ -176,7 +177,6 @@ public class StockSummaryService implements StockSummaryDao {
         return p;
     }
 
-   
 
     @Override
     public StockSummary getProductSummaryById(int id) {

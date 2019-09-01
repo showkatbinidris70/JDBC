@@ -97,10 +97,6 @@ public class Medical {
     public void setDirectorName(String directorName) {
         this.directorName = directorName;
     }
- 
 
-   
-    
-    
 
 }

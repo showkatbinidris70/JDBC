@@ -3,6 +3,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.CustomDBConnection;
 import com.coderbd.dao.EmployeeTypeDao;
 import com.coderbd.pojo.EmployeeType;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,7 +22,7 @@ public class EmployeeTypeDaoImpl implements EmployeeTypeDao {
         etd.createTable();
     }
 
-    
+
     @Override
     public void createTable() {
         //make query
@@ -36,7 +37,7 @@ public class EmployeeTypeDaoImpl implements EmployeeTypeDao {
         }
     }
 
-    
+
     @Override
     public void save(EmployeeType et) {
         //make query
@@ -51,7 +52,7 @@ public class EmployeeTypeDaoImpl implements EmployeeTypeDao {
         }
     }
 
-    
+
     @Override
     public void update(EmployeeType et) {
         //make query
@@ -65,7 +66,7 @@ public class EmployeeTypeDaoImpl implements EmployeeTypeDao {
             Logger.getLogger(EmployeeTypeDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
 
     @Override
     public EmployeeType getEmployeeTypeById(int id) {
@@ -86,7 +87,7 @@ public class EmployeeTypeDaoImpl implements EmployeeTypeDao {
         return et;
     }
 
-    
+
     @Override
     public EmployeeType getEmployeeTypeByTypeName(String typeName) {
         EmployeeType et = new EmployeeType();
@@ -106,7 +107,7 @@ public class EmployeeTypeDaoImpl implements EmployeeTypeDao {
         return et;
     }
 
-    
+
     @Override
     public void delete(EmployeeType et) {
         //make query
@@ -121,10 +122,10 @@ public class EmployeeTypeDaoImpl implements EmployeeTypeDao {
         }
     }
 
-    
+
     @Override
     public List<EmployeeType> getList() {
-     List<EmployeeType> list = new ArrayList<>();
+        List<EmployeeType> list = new ArrayList<>();
         String sql = "select * from EmployeeType";
         try {
 

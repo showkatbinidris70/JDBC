@@ -6,7 +6,6 @@
 package com.codderbd.pojo;
 
 /**
- *
  * @author User
  */
 public class ProductCategory {
@@ -44,7 +43,6 @@ public class ProductCategory {
     public void setCatName(String catName) {
         this.catName = catName;
     }
-    
-    
-    
+
+
 }

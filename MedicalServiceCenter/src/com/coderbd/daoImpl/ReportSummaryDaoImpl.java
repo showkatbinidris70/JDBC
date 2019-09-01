@@ -5,6 +5,7 @@ import com.coderbd.dao.DoctorFeeSummaryDao;
 import com.coderbd.dao.ReportSummaryDao;
 import com.coderbd.pojo.Patient;
 import com.coderbd.pojo.ReportSummary;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -32,7 +33,7 @@ public class ReportSummaryDaoImpl implements ReportSummaryDao {
          */
         String sql = "create table IF NOT EXISTS reportSummary(id int(11) auto_increment primary key, total_patient int(11),"
                 + "doctor_fee double, employee_salary double,  total_income double, total_spend double, employee_qty int(11),"
-                + "patient_id int(11),FOREIGN KEY (patient_id) REFERENCES patient(id))"; 
+                + "patient_id int(11),FOREIGN KEY (patient_id) REFERENCES patient(id))";
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.execute();

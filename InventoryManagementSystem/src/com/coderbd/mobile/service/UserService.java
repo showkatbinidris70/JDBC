@@ -3,9 +3,11 @@ package com.coderbd.mobile.service;
 
 import java.sql.Connection;
 import java.util.List;
+
 import com.coderbd.mobile.domain.User;
 import com.coderbd.mobile.conn.MySqlDbConnection;
 import com.coderbd.mobile.dao.UserDao;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,7 +16,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class UserService implements UserDao {

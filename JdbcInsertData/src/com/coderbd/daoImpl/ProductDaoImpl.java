@@ -8,6 +8,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.DBConnection;
 import com.coderbd.dao.ProductDao;
 import com.coderbd.pojo.Product;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,13 +19,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class ProductDaoImpl implements ProductDao {
 
-   // Connection conn = DBConnection.getDBConnection();
-    Connection  conn  = DBConnection.getDBConnection();
+    // Connection conn = DBConnection.getDBConnection();
+    Connection conn = DBConnection.getDBConnection();
+
     @Override
     public void createTable() {
         String sql = "create table mobile (id int(11) auto_increment primary key, name varchar(50))";

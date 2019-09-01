@@ -1,7 +1,6 @@
 package com.coderbd.inventory.domain;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class ItemsEligibleForOder {
@@ -34,8 +33,6 @@ public class ItemsEligibleForOder {
         this.orderQty = orderQty;
         this.orderStatus = orderStatus;
     }
-
-   
 
 
     public int getId() {

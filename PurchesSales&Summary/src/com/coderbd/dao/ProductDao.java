@@ -6,10 +6,10 @@
 package com.coderbd.dao;
 
 import com.coderbd.pojo.Product;
+
 import java.util.List;
 
 /**
- *
  * @author User
  */
 public interface ProductDao {

@@ -22,18 +22,17 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 /**
- *
  * @author Administrator
  */
 @Entity
 @Table(name = "oreder")
 @NamedQueries({
-    @NamedQuery(name = "Oreder.findAll", query = "SELECT o FROM Oreder o"),
-    @NamedQuery(name = "Oreder.findByOrderId", query = "SELECT o FROM Oreder o WHERE o.orderId = :orderId"),
-    @NamedQuery(name = "Oreder.findByOrderDate", query = "SELECT o FROM Oreder o WHERE o.orderDate = :orderDate"),
-    @NamedQuery(name = "Oreder.findByTotalAmount", query = "SELECT o FROM Oreder o WHERE o.totalAmount = :totalAmount"),
-    @NamedQuery(name = "Oreder.findByCommission", query = "SELECT o FROM Oreder o WHERE o.commission = :commission"),
-    @NamedQuery(name = "Oreder.findByTax", query = "SELECT o FROM Oreder o WHERE o.tax = :tax")})
+        @NamedQuery(name = "Oreder.findAll", query = "SELECT o FROM Oreder o"),
+        @NamedQuery(name = "Oreder.findByOrderId", query = "SELECT o FROM Oreder o WHERE o.orderId = :orderId"),
+        @NamedQuery(name = "Oreder.findByOrderDate", query = "SELECT o FROM Oreder o WHERE o.orderDate = :orderDate"),
+        @NamedQuery(name = "Oreder.findByTotalAmount", query = "SELECT o FROM Oreder o WHERE o.totalAmount = :totalAmount"),
+        @NamedQuery(name = "Oreder.findByCommission", query = "SELECT o FROM Oreder o WHERE o.commission = :commission"),
+        @NamedQuery(name = "Oreder.findByTax", query = "SELECT o FROM Oreder o WHERE o.tax = :tax")})
 public class Oreder implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

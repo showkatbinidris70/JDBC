@@ -3,6 +3,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.CustomDBConnection;
 import com.coderbd.dao.MedicalDao;
 import com.coderbd.pojo.Medical;
+
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -46,7 +47,7 @@ public class MedicalDaoImpl implements MedicalDao {
             if (medical.getName() != null) {
                 PreparedStatement pstm = conn.prepareStatement(sql);
                 pstm.setString(1, medical.getName());
-                pstm.setString(2, medical.getRegistrationNumber());             
+                pstm.setString(2, medical.getRegistrationNumber());
                 pstm.setDate(3, (Date) medical.getEstablishmentDate());
                 pstm.setString(4, medical.getAddress());
                 pstm.setInt(5, medical.getContactNumber());

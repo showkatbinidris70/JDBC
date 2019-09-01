@@ -15,7 +15,7 @@ public class Book {
     TimeZone zone;
 
     public static void main(String[] args) {
-      String[] ids = TimeZone.getAvailableIDs();
+        String[] ids = TimeZone.getAvailableIDs();
         for (int i = 0; i < ids.length; i++) {
             System.out.println(ids[i]);
         }

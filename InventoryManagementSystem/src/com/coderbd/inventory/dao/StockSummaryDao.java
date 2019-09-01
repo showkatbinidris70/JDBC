@@ -2,11 +2,11 @@ package com.coderbd.inventory.dao;
 
 import com.coderbd.inventory.domain.StockSummary;
 import com.coderbd.mobile.domain.User;
+
 import java.util.List;
 import java.util.Set;
 
 /**
- *
  * @author Rajaul Islam
  */
 public interface StockSummaryDao {

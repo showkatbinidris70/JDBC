@@ -6,11 +6,11 @@
 package com.coderbd.inventory.dao;
 
 import com.coderbd.inventory.domain.ItemsEligibleForOder;
+
 import java.util.List;
 import java.util.Set;
 
 /**
- *
  * @author Rajaul Islam
  */
 public interface ItemsEligibleForOderSummaryDao {
@@ -25,5 +25,6 @@ public interface ItemsEligibleForOderSummaryDao {
 
 
     public ItemsEligibleForOder getItemEligibleForOderByOrderStatus(String orderStatus);
+
     public List<ItemsEligibleForOder> getItemsEligibleForOderByOrderStatus(String orderStatus);
 }

@@ -9,6 +9,7 @@ import com.inventory.Connection.DBConnection;
 import com.inventory.Dao.ProductDao;
 import com.inventory.pojo.Product;
 import com.inventory.view.ProductView;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,19 +17,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author Md Yasin Arif
  */
-public class SalesDaoImp implements ProductDao{
-        Connection con = DBConnection.getDBConn();
-        public static void main(String[] args) {
+public class SalesDaoImp implements ProductDao {
+    Connection con = DBConnection.getDBConn();
+
+    public static void main(String[] args) {
         SalesDaoImp obj = new SalesDaoImp();
         obj.createTable();
     }
 
     @Override
     public void createTable() {
-         String sql = "create table if not Exists sales(id int(4) auto_increment primary key,product_name varchar(20),product_code varchar(20),sales_date date,quantity int(20),unit_price double,total_amount double)";
+        String sql = "create table if not Exists sales(id int(4) auto_increment primary key,product_name varchar(20),product_code varchar(20),sales_date date,quantity int(20),unit_price double,total_amount double)";
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.execute();
@@ -102,7 +103,7 @@ public class SalesDaoImp implements ProductDao{
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 Product p = new Product(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDate(4), rs.getInt(5), rs.getDouble(6), rs.getDouble(7));
                 list.add(p);
             }
@@ -111,6 +112,6 @@ public class SalesDaoImp implements ProductDao{
         }
         return list;
     }
-    
-    
+
+
 }

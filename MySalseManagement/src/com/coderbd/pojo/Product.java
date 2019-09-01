@@ -94,8 +94,6 @@ public class Product {
     public void setDate(Date date) {
         this.date = date;
     }
-    
-
 
 
 }

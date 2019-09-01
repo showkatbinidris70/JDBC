@@ -8,7 +8,6 @@ package com.coderbd.img;
 import java.sql.Blob;
 
 /**
- *
  * @author rajaul
  */
 public class Student {
@@ -22,8 +21,8 @@ public class Student {
     public Student() {
     }
 
-    public Student(String name,String filePath, String fileName) {
-        this.name = name;        
+    public Student(String name, String filePath, String fileName) {
+        this.name = name;
         this.filePath = filePath;
         this.fileName = fileName;
     }
@@ -60,10 +59,6 @@ public class Student {
         this.photo = photo;
     }
 
-   
-
-
-  
 
     public String getFilePath() {
         return filePath;

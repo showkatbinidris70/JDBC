@@ -8,7 +8,6 @@ package com.coderbd.pojo;
 import java.util.Date;
 
 /**
- *
  * @author User
  */
 public class FabricDyeing5 {
@@ -19,12 +18,12 @@ public class FabricDyeing5 {
     private double height;
     private double width;
     private String colorName;
-    private Date deliveryDate;
+    private String deliveryDate;
 
     public FabricDyeing5() {
     }
 
-    public FabricDyeing5(int id, String fabricName, int fabricQuantity, double height, double width, String colorName, Date deliveryDate) {
+    public FabricDyeing5(int id, String fabricName, int fabricQuantity, double height, double width, String colorName, String deliveryDate) {
         this.id = id;
         this.fabricName = fabricName;
         this.fabricQuantity = fabricQuantity;
@@ -34,7 +33,7 @@ public class FabricDyeing5 {
         this.deliveryDate = deliveryDate;
     }
 
-    public FabricDyeing5(String fabricName, int fabricQuantity, double height, double width, String colorName, Date deliveryDate) {
+    public FabricDyeing5(String fabricName, int fabricQuantity, double height, double width, String colorName, String deliveryDate) {
         this.fabricName = fabricName;
         this.fabricQuantity = fabricQuantity;
         this.height = height;
@@ -91,14 +90,13 @@ public class FabricDyeing5 {
         this.colorName = colorName;
     }
 
-    public Date getDeliveryDate() {
+    public String getDeliveryDate() {
         return deliveryDate;
     }
 
-    public void setDeliveryDate(Date deliveryDate) {
+    public void setDeliveryDate(String deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
 
-    
 
 }

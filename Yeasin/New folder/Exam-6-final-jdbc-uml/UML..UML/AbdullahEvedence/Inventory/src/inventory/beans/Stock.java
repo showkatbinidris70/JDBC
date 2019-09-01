@@ -19,16 +19,15 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- *
  * @author Administrator
  */
 @Entity
 @Table(name = "stock")
 @NamedQueries({
-    @NamedQuery(name = "Stock.findAll", query = "SELECT s FROM Stock s"),
-    @NamedQuery(name = "Stock.findByStockid", query = "SELECT s FROM Stock s WHERE s.stockid = :stockid"),
-    @NamedQuery(name = "Stock.findByStockInHand", query = "SELECT s FROM Stock s WHERE s.stockInHand = :stockInHand"),
-    @NamedQuery(name = "Stock.findByStocklevel", query = "SELECT s FROM Stock s WHERE s.stocklevel = :stocklevel")})
+        @NamedQuery(name = "Stock.findAll", query = "SELECT s FROM Stock s"),
+        @NamedQuery(name = "Stock.findByStockid", query = "SELECT s FROM Stock s WHERE s.stockid = :stockid"),
+        @NamedQuery(name = "Stock.findByStockInHand", query = "SELECT s FROM Stock s WHERE s.stockInHand = :stockInHand"),
+        @NamedQuery(name = "Stock.findByStocklevel", query = "SELECT s FROM Stock s WHERE s.stocklevel = :stocklevel")})
 public class Stock implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

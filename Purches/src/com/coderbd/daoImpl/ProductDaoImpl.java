@@ -8,6 +8,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.DConnection;
 import com.coderbd.dao.ProductDao;
 import com.coderbd.pojo.Product;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +19,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class ProductDaoImpl implements ProductDao {

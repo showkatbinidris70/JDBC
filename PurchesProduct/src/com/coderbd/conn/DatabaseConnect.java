@@ -6,13 +6,13 @@
 package com.coderbd.conn;
 
 import com.mysql.jdbc.*;
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class DatabaseConnect {

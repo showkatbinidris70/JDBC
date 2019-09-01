@@ -6,20 +6,20 @@
 package com.codderbd.dao;
 
 import com.codderbd.pojo.ProductSales;
+
 import java.util.List;
 
 /**
- *
  * @author User
  */
 public interface ProductSalesDao {
     void createTable();
 
-    void save(ProductSales ps);   
+    void save(ProductSales ps);
 
     ProductSales getProductSalesById(int id);
 
-    ProductSales getProductSalesByProductCode(String code);   
+    ProductSales getProductSalesByProductCode(String code);
 
     List<ProductSales> getList();
 }

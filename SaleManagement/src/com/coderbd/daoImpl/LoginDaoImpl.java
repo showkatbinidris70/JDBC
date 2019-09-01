@@ -4,6 +4,7 @@ import com.coderbd.conn.CustomDBConnection;
 import com.coderbd.dao.LoginDao;
 import com.coderbd.pojo.Role;
 import com.coderbd.pojo.User;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,7 +24,7 @@ public class LoginDaoImpl implements LoginDao {
         try {
             ps = conn.prepareStatement(sql);
             ps.setString(1, username);
-            ps.setString(2, password);          
+            ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 user = new User(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), new Role(rs.getInt(6)));

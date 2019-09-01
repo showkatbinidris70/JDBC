@@ -1,22 +1,21 @@
-
 package com.coderbd.pojo;
 
 import java.util.Date;
 
-
 public class GetOrder1 {
+
     private int id;
     private String orderCode;
     private int productQuantity;
     private double unitPrice;
     private double totalPrice;
     private Date orderDate;
-    private Date deliveryDate;
+    private String deliveryDate;
 
     public GetOrder1() {
     }
 
-    public GetOrder1(int id, String orderCode, int productQuantity, double unitPrice, double totalPrice, Date currentDate, Date deliveryDate) {
+    public GetOrder1(int id, String orderCode, int productQuantity, double unitPrice, double totalPrice, Date currentDate, String deliveryDate) {
         this.id = id;
         this.orderCode = orderCode;
         this.productQuantity = productQuantity;
@@ -26,7 +25,7 @@ public class GetOrder1 {
         this.deliveryDate = deliveryDate;
     }
 
-    public GetOrder1(String orderCode, int productQuantity, double unitPrice, double totalPrice, Date currentDate, Date deliveryDate) {
+    public GetOrder1(String orderCode, int productQuantity, double unitPrice, double totalPrice, Date currentDate, String deliveryDate) {
         this.orderCode = orderCode;
         this.productQuantity = productQuantity;
         this.unitPrice = unitPrice;
@@ -83,13 +82,12 @@ public class GetOrder1 {
         this.orderDate = currentDate;
     }
 
-    public Date getDeliveryDate() {
+    public String getDeliveryDate() {
         return deliveryDate;
     }
 
-    public void setDeliveryDate(Date deliveryDate) {
+    public void setDeliveryDate(String deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
-    
-    
+
 }

@@ -17,18 +17,17 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
- *
  * @author user
  */
 @Entity
 @Table(name = "order_line")
 @NamedQueries({
-    @NamedQuery(name = "OrderLine.findAll", query = "SELECT o FROM OrderLine o"),
-    @NamedQuery(name = "OrderLine.findByOrderlineid", query = "SELECT o FROM OrderLine o WHERE o.orderlineid = :orderlineid"),
-    @NamedQuery(name = "OrderLine.findByOrderId", query = "SELECT o FROM OrderLine o WHERE o.orderId = :orderId"),
-    @NamedQuery(name = "OrderLine.findByStockId", query = "SELECT o FROM OrderLine o WHERE o.stockId = :stockId"),
-    @NamedQuery(name = "OrderLine.findByRate", query = "SELECT o FROM OrderLine o WHERE o.rate = :rate"),
-    @NamedQuery(name = "OrderLine.findByTotal", query = "SELECT o FROM OrderLine o WHERE o.total = :total")})
+        @NamedQuery(name = "OrderLine.findAll", query = "SELECT o FROM OrderLine o"),
+        @NamedQuery(name = "OrderLine.findByOrderlineid", query = "SELECT o FROM OrderLine o WHERE o.orderlineid = :orderlineid"),
+        @NamedQuery(name = "OrderLine.findByOrderId", query = "SELECT o FROM OrderLine o WHERE o.orderId = :orderId"),
+        @NamedQuery(name = "OrderLine.findByStockId", query = "SELECT o FROM OrderLine o WHERE o.stockId = :stockId"),
+        @NamedQuery(name = "OrderLine.findByRate", query = "SELECT o FROM OrderLine o WHERE o.rate = :rate"),
+        @NamedQuery(name = "OrderLine.findByTotal", query = "SELECT o FROM OrderLine o WHERE o.total = :total")})
 public class OrderLine implements Serializable {
     @JoinColumn(name = "orderId", referencedColumnName = "orderId")
     @ManyToOne

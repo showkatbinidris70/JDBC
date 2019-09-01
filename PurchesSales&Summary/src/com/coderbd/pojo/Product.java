@@ -6,14 +6,12 @@
 package com.coderbd.pojo;
 
 /**
- *
  * @author User
  */
 public class Product {
-   
 
-    
-     private int id;
+
+    private int id;
     private String productName;
     private String productCode;
     private int quantity;
@@ -22,6 +20,7 @@ public class Product {
 
     public Product() {
     }
+
     public Product(int id, String productName, String productCode, int quantity, double unitPirce, double totalPrice) {
         this.id = id;
         this.productName = productName;
@@ -86,5 +85,5 @@ public class Product {
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
-    
+
 }

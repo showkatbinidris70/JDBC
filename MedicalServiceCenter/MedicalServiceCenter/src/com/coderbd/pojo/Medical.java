@@ -83,8 +83,6 @@ public class Medical {
     public String toString() {
         return "Medical{" + "id=" + id + ", name=" + name + ", registrationNumber=" + registrationNumber + ", establishmentDate=" + establishmentDate + ", address=" + address + ", contactNumber=" + contactNumber + ", directorName=" + directorName + '}';
     }
-    
-    
-    
+
 
 }

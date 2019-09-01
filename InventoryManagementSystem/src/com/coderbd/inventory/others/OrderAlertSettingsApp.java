@@ -3,11 +3,11 @@ package com.coderbd.inventory.others;
 import com.coderbd.inventory.domain.OrderAlertSettings;
 import com.coderbd.inventory.enums.StockAlertPriority;
 import com.coderbd.inventory.service.OrderAlertSettingsService;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class OrderAlertSettingsApp {

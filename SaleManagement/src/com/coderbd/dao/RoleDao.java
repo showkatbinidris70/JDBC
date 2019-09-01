@@ -1,6 +1,7 @@
 package com.coderbd.dao;
 
 import com.coderbd.pojo.Role;
+
 import java.util.List;
 
 public interface RoleDao {

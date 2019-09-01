@@ -12,7 +12,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- *
  * @author User
  */
 public class Metadata {

@@ -7,8 +7,8 @@ import javax.servlet.ServletException;
 
 public class MainAction implements Action {
 
-	public String process(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException {
-		return "/main.jsp";
-	}
+    public String process(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException {
+        return "/main.jsp";
+    }
 }

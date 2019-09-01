@@ -15,15 +15,14 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
- *
  * @author user
  */
 @Entity
 @Table(name = "order_type")
 @NamedQueries({
-    @NamedQuery(name = "OrderType.findAll", query = "SELECT o FROM OrderType o"),
-    @NamedQuery(name = "OrderType.findByOrderTypeId", query = "SELECT o FROM OrderType o WHERE o.orderTypeId = :orderTypeId"),
-    @NamedQuery(name = "OrderType.findByOrderTypeTitle", query = "SELECT o FROM OrderType o WHERE o.orderTypeTitle = :orderTypeTitle")})
+        @NamedQuery(name = "OrderType.findAll", query = "SELECT o FROM OrderType o"),
+        @NamedQuery(name = "OrderType.findByOrderTypeId", query = "SELECT o FROM OrderType o WHERE o.orderTypeId = :orderTypeId"),
+        @NamedQuery(name = "OrderType.findByOrderTypeTitle", query = "SELECT o FROM OrderType o WHERE o.orderTypeTitle = :orderTypeTitle")})
 public class OrderType implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

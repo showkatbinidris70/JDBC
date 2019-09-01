@@ -14,49 +14,40 @@ import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaQuery;
 
 
+public class MyEntityManager {
+    private EntityManagerFactory emf = null;
 
-public class MyEntityManager
-{
-     private EntityManagerFactory emf = null;
 
-    
-    public MyEntityManager()
-    {
-         emf = Persistence.createEntityManagerFactory("InventoryPU");
-        
+    public MyEntityManager() {
+        emf = Persistence.createEntityManagerFactory("InventoryPU");
+
 
     }
 
-    public EntityManager getEntityManager()
-    {
-       
-         return emf.createEntityManager();
-       
+    public EntityManager getEntityManager() {
+
+        return emf.createEntityManager();
+
     }
 
 
-    public boolean add(Object object)
-    {
+    public boolean add(Object object) {
         boolean success = false;
-        try
-        {
+        try {
             EntityManager em = getEntityManager();
             em.getTransaction().begin();
             em.persist(object);
             em.flush();
             em.getTransaction().commit();
             em.close();
-            success=true;
-        }
-        catch (Exception ex)
-        {
+            success = true;
+        } catch (Exception ex) {
             Logger.getLogger(MyEntityManager.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+        }
         return success;
     }
 
-    public boolean update(Object object)
-    {
+    public boolean update(Object object) {
         boolean success = false;
         try {
             EntityManager em = getEntityManager();
@@ -66,62 +57,58 @@ public class MyEntityManager
             em.flush();
             em.getTransaction().commit();
             em.close();
-            success=true;
+            success = true;
         } catch (Exception ex) {
             Logger.getLogger(MyEntityManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         return success;
     }
 
-    public boolean delete(Object object)
-    {   boolean success = false;
-        try {EntityManager em = getEntityManager();
-             em = getEntityManager();
-             em.getTransaction().begin();
-             em.remove(em.merge(object));
-             em.getTransaction().commit();
-             em.close();
-            success=true;
+    public boolean delete(Object object) {
+        boolean success = false;
+        try {
+            EntityManager em = getEntityManager();
+            em = getEntityManager();
+            em.getTransaction().begin();
+            em.remove(em.merge(object));
+            em.getTransaction().commit();
+            em.close();
+            success = true;
         } catch (Exception ex) {
             Logger.getLogger(MyEntityManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         return success;
     }
 
-    public Object find(Class objectClass,Object id)
-    {
-       return getEntityManager().find(objectClass, id);
+    public Object find(Class objectClass, Object id) {
+        return getEntityManager().find(objectClass, id);
     }
 
-    public int getNewId(Class clazz,String idColumn)
-    {
+    public int getNewId(Class clazz, String idColumn) {
         EntityManager em = getEntityManager();
-        int max=0;
+        int max = 0;
         CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
         cq.select(em.getCriteriaBuilder().max(cq.from(clazz).get(idColumn)));
         Query q = em.createQuery(cq);
-        if(q.getSingleResult()!=null)
-            return ((Integer) q.getSingleResult()).intValue()+1;
-          else
+        if (q.getSingleResult() != null)
+            return ((Integer) q.getSingleResult()).intValue() + 1;
+        else
             return 1;
     }
 
-       public int getNewStringId(Class clazz,String idColumn)
-    {
+    public int getNewStringId(Class clazz, String idColumn) {
         EntityManager em = getEntityManager();
-        int max=0;
+        int max = 0;
         CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
         cq.select(em.getCriteriaBuilder().max(cq.from(clazz).get(idColumn)));
         Query q = em.createQuery(cq);
-        if(q.getSingleResult()!=null)
-        {
-            String str=q.getSingleResult().toString();
-            return  Integer.parseInt( str)+1;
+        if (q.getSingleResult() != null) {
+            String str = q.getSingleResult().toString();
+            return Integer.parseInt(str) + 1;
         } else
             return 1;
     }
 
-    
 
 }
 

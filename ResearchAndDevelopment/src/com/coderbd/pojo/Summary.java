@@ -8,7 +8,6 @@ package com.coderbd.pojo;
 import java.util.Date;
 
 /**
- *
  * @author User
  */
 public class Summary {
@@ -20,12 +19,12 @@ public class Summary {
     private int finishing;
     private int completedProduct;
     private Date orderDate;
-    private Date deliveryDate;
+    private String deliveryDate;
 
     public Summary() {
     }
 
-    public Summary(String orderCode, int totalProduct, int knitting, int dyeing, int finishing, int completedProduct, Date orderDate, Date deliveryDate) {
+    public Summary(String orderCode, int totalProduct, int knitting, int dyeing, int finishing, int completedProduct, Date orderDate, String deliveryDate) {
         this.orderCode = orderCode;
         this.totalProduct = totalProduct;
         this.knitting = knitting;
@@ -92,13 +91,13 @@ public class Summary {
         this.orderDate = orderDate;
     }
 
-    public Date getDeliveryDate() {
+    public String getDeliveryDate() {
         return deliveryDate;
     }
 
-    public void setDeliveryDate(Date deliveryDate) {
+    public void setDeliveryDate(String deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
 
-    
+
 }

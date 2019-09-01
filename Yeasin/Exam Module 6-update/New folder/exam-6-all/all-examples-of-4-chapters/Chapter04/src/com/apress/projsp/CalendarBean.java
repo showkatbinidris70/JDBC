@@ -7,7 +7,7 @@ import java.util.Date;
  * Simple bean wrapper around a Calendar to enable the manipulation
  * via JSTL tag.
  *
- * @author  Dan Jepp
+ * @author Dan Jepp
  */
 public class CalendarBean {
 
@@ -22,10 +22,10 @@ public class CalendarBean {
     }
 
     public int getHour() {
-      return calendar.get(Calendar.HOUR_OF_DAY);
+        return calendar.get(Calendar.HOUR_OF_DAY);
     }
 
     public int getMinute() {
-      return calendar.get(Calendar.MINUTE);
+        return calendar.get(Calendar.MINUTE);
     }
 }

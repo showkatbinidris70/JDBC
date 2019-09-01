@@ -1,6 +1,7 @@
 package com.coderbd.dao;
 
 import com.coderbd.pojo.ReportSummary;
+
 import java.util.List;
 
 public interface ReportSummaryDao {

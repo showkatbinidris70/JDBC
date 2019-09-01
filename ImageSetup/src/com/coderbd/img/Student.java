@@ -6,13 +6,12 @@
 package com.coderbd.img;
 
 /**
- *
  * @author User
  */
 public class Student {
     private int id;
     private String name;
-    private byte [] photo;
+    private byte[] photo;
 
     public Student() {
     }
@@ -51,6 +50,6 @@ public class Student {
     public void setPhoto(byte[] photo) {
         this.photo = photo;
     }
-    
-    
+
+
 }

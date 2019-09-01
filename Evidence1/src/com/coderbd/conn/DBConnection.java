@@ -12,7 +12,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class DBConnection {
@@ -22,6 +21,7 @@ public class DBConnection {
     public static void main(String[] args) {
         DBConnection.getDBConnection();
     }
+
     public static Connection getDBConnection() {
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/sali", "root", "1234");

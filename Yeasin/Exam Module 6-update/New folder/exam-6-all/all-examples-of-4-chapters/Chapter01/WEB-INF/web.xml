@@ -5,9 +5,9 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          version="2.4">
 
-  <display-name>Pro JSP - Chapter 1 JSP Examples</display-name>
+    <display-name>Pro JSP - Chapter 1 JSP Examples</display-name>
 
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-  </welcome-file-list>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
 </web-app>

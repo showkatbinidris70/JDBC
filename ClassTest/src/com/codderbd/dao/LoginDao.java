@@ -8,9 +8,7 @@ package com.codderbd.dao;
 import com.codderbd.pojo.User;
 
 
-
 /**
- *
  * @author User
  */
 public interface LoginDao {

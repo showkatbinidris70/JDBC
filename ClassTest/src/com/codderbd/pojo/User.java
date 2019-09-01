@@ -6,7 +6,6 @@
 package com.codderbd.pojo;
 
 /**
- *
  * @author User
  */
 public class User {
@@ -27,7 +26,7 @@ public class User {
         this.mobile = mobile;
         this.role = role;
     }
-    
+
 
     public User(int id, String fullName, String userName, String password, String mobile, Role role) {
         this.id = id;
@@ -85,6 +84,6 @@ public class User {
     public void setRole(Role role) {
         this.role = role;
     }
-    
-    
+
+
 }

@@ -6,9 +6,8 @@
 package com.coderbd.daoImpl;
 
 /**
- *
  * @author User
  */
 public class SalesDaoImpl {
-    
+
 }

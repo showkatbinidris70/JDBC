@@ -6,12 +6,11 @@
 package com.codderbd.dao;
 
 import com.codderbd.pojo.Role;
+
 import java.util.List;
 
 
-
 /**
- *
  * @author User
  */
 public interface RoleDao {

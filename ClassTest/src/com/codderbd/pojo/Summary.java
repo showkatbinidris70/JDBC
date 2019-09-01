@@ -6,7 +6,6 @@
 package com.codderbd.pojo;
 
 /**
- *
  * @author User
  */
 public class Summary {
@@ -102,7 +101,6 @@ public class Summary {
     public void setProduct(Product product) {
         this.product = product;
     }
-    
-    
-    
+
+
 }

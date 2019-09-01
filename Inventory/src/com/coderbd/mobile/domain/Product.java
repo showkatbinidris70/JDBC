@@ -6,11 +6,10 @@
 package com.coderbd.mobile.domain;
 
 /**
- *
  * @author User
  */
 public class Product {
-     private int id;
+    private int id;
     private String name;
     private String productCode;
     private double unitPrice;
@@ -95,6 +94,6 @@ public class Product {
     public void setPurchaseDate(String purchaseDate) {
         this.purchaseDate = purchaseDate;
     }
-    
-    
+
+
 }

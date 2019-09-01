@@ -6,11 +6,10 @@
 package com.codderbd.test;
 
 /**
- *
  * @author User
  */
 public class RoleTest {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
 
     }
 }

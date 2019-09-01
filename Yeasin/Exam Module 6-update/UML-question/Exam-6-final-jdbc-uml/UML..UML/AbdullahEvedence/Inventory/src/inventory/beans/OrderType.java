@@ -17,15 +17,14 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- *
  * @author Administrator
  */
 @Entity
 @Table(name = "order_type")
 @NamedQueries({
-    @NamedQuery(name = "OrderType.findAll", query = "SELECT o FROM OrderType o"),
-    @NamedQuery(name = "OrderType.findByOrderTypeId", query = "SELECT o FROM OrderType o WHERE o.orderTypeId = :orderTypeId"),
-    @NamedQuery(name = "OrderType.findByOrderTitle", query = "SELECT o FROM OrderType o WHERE o.orderTitle = :orderTitle")})
+        @NamedQuery(name = "OrderType.findAll", query = "SELECT o FROM OrderType o"),
+        @NamedQuery(name = "OrderType.findByOrderTypeId", query = "SELECT o FROM OrderType o WHERE o.orderTypeId = :orderTypeId"),
+        @NamedQuery(name = "OrderType.findByOrderTitle", query = "SELECT o FROM OrderType o WHERE o.orderTitle = :orderTitle")})
 public class OrderType implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

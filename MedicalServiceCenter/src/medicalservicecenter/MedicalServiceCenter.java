@@ -6,7 +6,6 @@
 package medicalservicecenter;
 
 /**
- *
  * @author User
  */
 public class MedicalServiceCenter {
@@ -17,5 +16,5 @@ public class MedicalServiceCenter {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
 }

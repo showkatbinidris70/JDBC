@@ -4,6 +4,7 @@ import com.coderbd.conn.CustomDBConnection;
 import com.coderbd.dao.SummaryDao;
 import com.coderbd.pojo.Product;
 import com.coderbd.pojo.Summary;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +19,7 @@ public class SummaryDaoImpl implements SummaryDao {
     Connection conn = CustomDBConnection.getDBConnection();
 
     public static void main(String[] args) {
-        SummaryDaoImpl  obj = new SummaryDaoImpl ();
+        SummaryDaoImpl obj = new SummaryDaoImpl();
         obj.createTable();
     }
 

@@ -1,13 +1,13 @@
 package com.apress.projsp;
 
 public class SourceBean {
-  String string;
+    String string;
 
-  public String getString() {
-    return string;
-  }
+    public String getString() {
+        return string;
+    }
 
-  public void setString(String s) {
-    string = s;
-  }
+    public void setString(String s) {
+        string = s;
+    }
 }

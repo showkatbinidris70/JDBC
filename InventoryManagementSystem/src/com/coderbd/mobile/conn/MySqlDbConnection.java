@@ -7,7 +7,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class MySqlDbConnection {

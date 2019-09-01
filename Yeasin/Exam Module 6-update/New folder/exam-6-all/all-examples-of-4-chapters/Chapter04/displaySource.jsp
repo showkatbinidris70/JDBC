@@ -1,9 +1,9 @@
 <html>
 
-  <head>
-      <title>Professional JSP 2, 4th Edition</title>
-      <link rel="stylesheet" href="projsp.css">
-  </head>
+<head>
+    <title>Professional JSP 2, 4th Edition</title>
+    <link rel="stylesheet" href="projsp.css">
+</head>
 
 <%@ taglib uri="/bodyTaglib" prefix="body" %>
 
@@ -12,11 +12,12 @@
 <body>
 
 <p>
-<h3>Source for <%= file %></h3>
+<h3>Source for <%= file %>
+</h3>
 </p>
 
 <body:encodeHTML preTag="true">
-  <body:includeFile file="<%= file %>" />
+    <body:includeFile file="<%= file %>"/>
 </body:encodeHTML>
 
 

@@ -8,6 +8,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.ProductBDConnection;
 import com.coderbd.dao.BuyingChemical3Dao;
 import com.coderbd.pojo.BuyingChemical3;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +19,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class BuyingChemical3DaoImpl implements BuyingChemical3Dao {
@@ -54,7 +54,7 @@ public class BuyingChemical3DaoImpl implements BuyingChemical3Dao {
             pstm.setDouble(4, bc.getTotalPrice());
             pstm.setDate(5, new java.sql.Date(bc.getBuyingdate().getTime()));
             pstm.setString(6, bc.getImportCompany());
-            pstm.setDate(7, new java.sql.Date(bc.getExpiredDate().getTime()));
+            pstm.setString(7, bc.getExpiredDate());
             pstm.executeUpdate();
             System.out.println("Inset successfully into buyingChemical table");
         } catch (SQLException ex) {
@@ -73,7 +73,7 @@ public class BuyingChemical3DaoImpl implements BuyingChemical3Dao {
             pstm.setDouble(4, bc.getTotalPrice());
             pstm.setDate(5, new java.sql.Date(bc.getBuyingdate().getTime()));
             pstm.setString(6, bc.getImportCompany());
-            pstm.setDate(7, new java.sql.Date(bc.getExpiredDate().getTime()));
+            pstm.setString(7, bc.getExpiredDate());
             pstm.executeUpdate();
             System.out.println("Update successfully into buyingChemical table");
         } catch (SQLException ex) {
@@ -96,7 +96,7 @@ public class BuyingChemical3DaoImpl implements BuyingChemical3Dao {
             pstm.setString(1, name);
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
-                BuyingChemical3 buyingChemical = new BuyingChemical3(rs.getString(1), rs.getInt(2), rs.getDouble(3), rs.getDouble(4), rs.getDate(5), rs.getString(6), rs.getDate(7));
+                BuyingChemical3 buyingChemical = new BuyingChemical3(rs.getString(1), rs.getInt(2), rs.getDouble(3), rs.getDouble(4), rs.getDate(5), rs.getString(6), rs.getString(7));
             }
         } catch (SQLException ex) {
             Logger.getLogger(BuyingThread2DaoImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -118,7 +118,7 @@ public class BuyingChemical3DaoImpl implements BuyingChemical3Dao {
             PreparedStatement pstm = conn.prepareStatement(sql);
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
-                BuyingChemical3 buyingChemical3 = new BuyingChemical3(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getDate(6), rs.getString(7), rs.getDate(8));
+                BuyingChemical3 buyingChemical3 = new BuyingChemical3(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getDate(6), rs.getString(7), rs.getString(8));
                 list.add(buyingChemical3);
             }
         } catch (SQLException ex) {

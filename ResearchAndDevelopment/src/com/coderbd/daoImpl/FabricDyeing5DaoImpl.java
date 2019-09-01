@@ -8,6 +8,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.ProductBDConnection;
 import com.coderbd.dao.FabricDyeing5Dao;
 import com.coderbd.pojo.FabricDyeing5;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,7 +19,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class FabricDyeing5DaoImpl implements FabricDyeing5Dao {
@@ -53,7 +53,7 @@ public class FabricDyeing5DaoImpl implements FabricDyeing5Dao {
             pstm.setDouble(3, fd.getHeight());
             pstm.setDouble(4, fd.getWidth());
             pstm.setString(5, fd.getColorName());
-            pstm.setDate(6, new java.sql.Date(fd.getDeliveryDate().getTime()));
+            pstm.setString(6, fd.getDeliveryDate());
             pstm.executeUpdate();
             System.out.println("Update successfully into fabricDyeing table");
         } catch (SQLException ex) {
@@ -71,7 +71,7 @@ public class FabricDyeing5DaoImpl implements FabricDyeing5Dao {
             pstm.setDouble(3, fd.getHeight());
             pstm.setDouble(4, fd.getWidth());
             pstm.setString(5, fd.getColorName());
-            pstm.setDate(6, new java.sql.Date(fd.getDeliveryDate().getTime()));
+            pstm.setString(6, fd.getDeliveryDate());
             pstm.executeUpdate();
             System.out.println("Inset successfully into fabricDyeing table");
         } catch (SQLException ex) {
@@ -94,7 +94,7 @@ public class FabricDyeing5DaoImpl implements FabricDyeing5Dao {
             pstm.setString(1, name);
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
-                FabricDyeing5 fabricDyeing = new FabricDyeing5(rs.getString(1), rs.getInt(2), rs.getDouble(3), rs.getDouble(4), rs.getString(5), rs.getDate(6));
+                FabricDyeing5 fabricDyeing = new FabricDyeing5(rs.getString(1), rs.getInt(2), rs.getDouble(3), rs.getDouble(4), rs.getString(5), rs.getString(6));
 
             }
         } catch (SQLException ex) {
@@ -110,14 +110,14 @@ public class FabricDyeing5DaoImpl implements FabricDyeing5Dao {
 
     @Override
     public List<FabricDyeing5> getList() {
-        
+
         List<FabricDyeing5> list = new ArrayList();
         String sql = "select * from fabricDyeing";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
-                FabricDyeing5 fabricDyeing5 = new FabricDyeing5(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getString(6), rs.getDate(7));
+                FabricDyeing5 fabricDyeing5 = new FabricDyeing5(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getDouble(4), rs.getDouble(5), rs.getString(6), rs.getString(7));
                 list.add(fabricDyeing5);
             }
         } catch (SQLException ex) {

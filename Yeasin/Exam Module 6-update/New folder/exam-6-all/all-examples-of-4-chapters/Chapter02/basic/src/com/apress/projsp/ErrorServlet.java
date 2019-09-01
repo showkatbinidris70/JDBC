@@ -6,15 +6,15 @@ import javax.servlet.http.*;
 
 public class ErrorServlet extends HttpServlet {
 
-  public void doGet(HttpServletRequest req, HttpServletResponse res)
-      throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse res)
+            throws ServletException, IOException {
 
-    res.setContentType("text/html");
+        res.setContentType("text/html");
 
-    PrintWriter out = res.getWriter();
+        PrintWriter out = res.getWriter();
 
-    out.println(1 / 0);
+        out.println(1 / 0);
 
-  }
+    }
 
 }

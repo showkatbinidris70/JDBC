@@ -1,7 +1,6 @@
 package com.coderbd.mobile.domain;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class ProductSales {

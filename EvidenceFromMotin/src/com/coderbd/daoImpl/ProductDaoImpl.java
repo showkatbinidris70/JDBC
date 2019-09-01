@@ -6,26 +6,22 @@
 package com.coderbd.daoImpl;
 
 
-
-
-
-
 import com.coderbd.conn.CustomerDBConnection;
 import com.coderbd.dao.ProductDao;
 import com.coderbd.pojo.Product;
 import com.sun.jndi.ldap.Connection;
+
 import java.util.List;
 
 /**
- *
  * @author User
  */
-public class ProductDaoImpl implements ProductDao{
+public class ProductDaoImpl implements ProductDao {
     Connection conn = CustomerDBConnection.getDBConnection();
-    
+
     @Override
     public void createTable() {
-        
+
     }
 
     @Override
@@ -57,5 +53,5 @@ public class ProductDaoImpl implements ProductDao{
     public List<Product> getList() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

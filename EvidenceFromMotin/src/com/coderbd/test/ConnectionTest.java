@@ -8,14 +8,13 @@ package com.coderbd.test;
 import com.coderbd.conn.CustomerDBConnection;
 
 /**
- *
  * @author User
  */
 public class ConnectionTest {
-//    public static void main(String[] args) {
+    //    public static void main(String[] args) {
 //        CustomerDBConnection.getDBConnection();
 //    }
     public static void main(String[] args) {
-       CustomerDBConnection.getDBConnection();
+        CustomerDBConnection.getDBConnection();
     }
 }

@@ -8,9 +8,7 @@ package com.coderbd.pojo;
 import java.util.Date;
 
 
-
 /**
- *
  * @author User
  */
 public class BuyingChemical3 {
@@ -21,12 +19,12 @@ public class BuyingChemical3 {
     private double totalPrice;
     private Date buyingdate;
     private String importCompany;
-    private Date expiredDate;
+    private String expiredDate;
 
     public BuyingChemical3() {
     }
 
-    public BuyingChemical3(int id, String chemicalName, int chemicalQuantity, double unitPrice, double totalPrice, Date buyingdate, String importCompany, Date expiredDate) {
+    public BuyingChemical3(int id, String chemicalName, int chemicalQuantity, double unitPrice, double totalPrice, Date buyingdate, String importCompany, String expiredDate) {
         this.id = id;
         this.chemicalName = chemicalName;
         this.chemicalQuantity = chemicalQuantity;
@@ -37,7 +35,7 @@ public class BuyingChemical3 {
         this.expiredDate = expiredDate;
     }
 
-    public BuyingChemical3(String chemicalName, int chemicalQuantity, double unitPrice, double totalPrice, Date buyingdate, String importCompany, Date expiredDate) {
+    public BuyingChemical3(String chemicalName, int chemicalQuantity, double unitPrice, double totalPrice, Date buyingdate, String importCompany, String expiredDate) {
         this.chemicalName = chemicalName;
         this.chemicalQuantity = chemicalQuantity;
         this.unitPrice = unitPrice;
@@ -103,13 +101,13 @@ public class BuyingChemical3 {
         this.importCompany = importCompany;
     }
 
-    public Date getExpiredDate() {
+    public String getExpiredDate() {
         return expiredDate;
     }
 
-    public void setExpiredDate(Date expiredDate) {
+    public void setExpiredDate(String expiredDate) {
         this.expiredDate = expiredDate;
     }
 
-    
+
 }

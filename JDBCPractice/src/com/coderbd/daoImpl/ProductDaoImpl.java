@@ -8,6 +8,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.DBConnection;
 import com.coderbd.dao.ProductDao;
 import com.coderbd.pojo.Product;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -16,14 +17,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class ProductDaoImpl implements ProductDao {
 
     Connection conn = DBConnection.getBDConnection();
-   
-    
+
+
     @Override
     public void createTable() {
         String sql = "create table if not exists productTable (id int(11) auto_increment primary key,quantity int(11), unit_price double,total_price double)";
@@ -34,12 +34,12 @@ public class ProductDaoImpl implements ProductDao {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-     
+
     }
 
     @Override
     public void save(Product p) {
-       String sql = "inset into productTable(product_name,quantity,unit_price,total_price) values (?,?,?,?)";
+        String sql = "inset into productTable(product_name,quantity,unit_price,total_price) values (?,?,?,?)";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, p.getProductName());
@@ -51,8 +51,8 @@ public class ProductDaoImpl implements ProductDao {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-       
-    
+
+
     }
 
     @Override
@@ -67,8 +67,8 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public Product getProductById(int id) {
-       Product product  = null;
-       String sql = "select * from productTable where id = ?";
+        Product product = null;
+        String sql = "select * from productTable where id = ?";
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, id);
@@ -80,7 +80,7 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public List<Product> getList() {
-        
+
     }
 
     @Override

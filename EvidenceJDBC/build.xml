@@ -9,11 +9,11 @@
 <!-- in the project's Project Properties dialog box.-->
 <<<<<<< HEAD
 <project name="EvidenceJDBC" default="default" basedir=".">
-    <description>Builds, tests, and runs the project EvidenceJDBC.</description>
+<description>Builds, tests, and runs the project EvidenceJDBC.</description>
 =======
 <project name="EvidenceJDBCFromYeasin" default="default" basedir=".">
     <description>Builds, tests, and runs the project EvidenceJDBCFromYeasin.</description>
->>>>>>> 1880a5098551963e5dfd3e13436e5e860a30f95b
+    >>>>>>> 1880a5098551963e5dfd3e13436e5e860a30f95b
     <import file="nbproject/build-impl.xml"/>
     <!--
 

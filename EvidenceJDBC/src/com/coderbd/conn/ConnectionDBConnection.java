@@ -6,9 +6,8 @@
 package com.coderbd.conn;
 
 /**
- *
  * @author User
  */
 public class ConnectionDBConnection {
-    
+
 }

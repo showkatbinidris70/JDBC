@@ -12,7 +12,7 @@ public class Patient {
     private Date admitedDate;
     private String mobile;
     private double payingBills;
-    private Date releaseDate;    
+    private Date releaseDate;
     Medical medical;
 
 }

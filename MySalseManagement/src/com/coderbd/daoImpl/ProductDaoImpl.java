@@ -3,6 +3,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.CustomDBConnection;
 import com.coderbd.dao.ProductDao;
 import com.coderbd.pojo.Product;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -76,7 +77,7 @@ public class ProductDaoImpl implements ProductDao {
             ResultSet rs = pstm.executeQuery();
             while (rs.next()) {
                 product = new Product(rs.getInt(1), rs.getString(2), rs.getString(3),
-                     rs.getInt(4), rs.getDouble(5), rs.getDouble(6), rs.getDate(7));
+                        rs.getInt(4), rs.getDouble(5), rs.getDouble(6), rs.getDate(7));
             }
 
         } catch (SQLException ex) {
@@ -92,7 +93,7 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public List<Product> getList() {
-    List<Product> list = new ArrayList();
+        List<Product> list = new ArrayList();
         String sql = "select * from product";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -106,7 +107,7 @@ public class ProductDaoImpl implements ProductDao {
             Logger.getLogger(ProductDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         return list;
-    
+
     }
 
 }

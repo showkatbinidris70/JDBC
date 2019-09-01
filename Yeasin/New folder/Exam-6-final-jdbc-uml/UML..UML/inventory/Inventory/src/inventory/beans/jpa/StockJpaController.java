@@ -8,6 +8,7 @@ package inventory.beans.jpa;
 import inventory.beans.Stock;
 import inventory.beans.jpa.exceptions.NonexistentEntityException;
 import inventory.beans.jpa.exceptions.PreexistingEntityException;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -15,13 +16,14 @@ import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+
 import inventory.beans.Product;
 import inventory.beans.OrderLine;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author user
  */
 public class StockJpaController {
@@ -29,6 +31,7 @@ public class StockJpaController {
     public StockJpaController() {
         emf = Persistence.createEntityManagerFactory("InventoryPU");
     }
+
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {

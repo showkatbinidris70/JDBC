@@ -9,6 +9,7 @@ import com.inventory.Connection.DBConnection;
 import com.inventory.Dao.SummaryDao;
 import com.inventory.pojo.Product;
 import com.inventory.pojo.Summary;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author Md Yasin Arif
  */
 public class SummaryDaoImp implements SummaryDao {

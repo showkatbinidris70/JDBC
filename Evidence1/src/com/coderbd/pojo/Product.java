@@ -6,7 +6,6 @@
 package com.coderbd.pojo;
 
 /**
- *
  * @author User
  */
 public class Product {
@@ -86,5 +85,5 @@ public class Product {
         this.totalPrice = totalPrice;
     }
 
-   
+
 }

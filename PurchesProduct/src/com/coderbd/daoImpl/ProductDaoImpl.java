@@ -9,17 +9,19 @@ import com.coderbd.conn.DatabaseConnect;
 import com.coderbd.dao.ProductDao;
 import com.coderbd.pojo.Product;
 import com.mysql.jdbc.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
 import static java.util.Collections.list;
+
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class ProductDaoImpl implements ProductDao {

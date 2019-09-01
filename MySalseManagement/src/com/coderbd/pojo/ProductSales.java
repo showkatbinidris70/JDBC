@@ -105,8 +105,6 @@ public class ProductSales {
     public void setProduct(Product product) {
         this.product = product;
     }
-    
-    
-    
-    
+
+
 }

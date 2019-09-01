@@ -3,6 +3,7 @@ package com.coderbd.inventory.service;
 import com.coderbd.inventory.dao.ItemsEligibleForOderSummaryDao;
 import com.coderbd.inventory.domain.ItemsEligibleForOder;
 import com.coderbd.mobile.conn.MySqlDbConnection;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +15,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class ItemsEligibleForOderService implements ItemsEligibleForOderSummaryDao {
@@ -50,9 +50,9 @@ public class ItemsEligibleForOderService implements ItemsEligibleForOderSummaryD
     public void updateList(Set<ItemsEligibleForOder> items) {
         if (items.size() > 0) {
             for (ItemsEligibleForOder item : items) {
-             
+
                 try {
-                 PreparedStatement stmt = conn.prepareStatement("update itemseligibleforoder set orderQty=?,orderStatus=? where id=?");
+                    PreparedStatement stmt = conn.prepareStatement("update itemseligibleforoder set orderQty=?,orderStatus=? where id=?");
 
                     stmt.setInt(1, item.getOrderQty());
                     stmt.setString(2, item.getOrderStatus());

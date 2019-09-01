@@ -150,7 +150,6 @@ public class TreatmentDetails {
     public String Employee(Employee employee) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
+
 
 }

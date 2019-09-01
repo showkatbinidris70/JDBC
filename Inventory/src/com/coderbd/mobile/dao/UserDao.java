@@ -6,14 +6,14 @@
 package com.coderbd.mobile.dao;
 
 import com.coderbd.mobile.domain.User;
+
 import java.util.List;
 
 /**
- *
  * @author User
  */
 public interface UserDao {
-     void save(User s);
+    void save(User s);
 
     void update(User s);
 
@@ -22,6 +22,6 @@ public interface UserDao {
     List<User> getList();
 
     User getUser(int id);
-    
-     User getUserByUsername(String username);
+
+    User getUserByUsername(String username);
 }

@@ -6,7 +6,6 @@
 package com.codder.bd.pojo;
 
 /**
- *
  * @author User
  */
 public class Role {
@@ -44,7 +43,6 @@ public class Role {
     public void setRoleName(String roleName) {
         this.roleName = roleName;
     }
-    
-    
-    
+
+
 }

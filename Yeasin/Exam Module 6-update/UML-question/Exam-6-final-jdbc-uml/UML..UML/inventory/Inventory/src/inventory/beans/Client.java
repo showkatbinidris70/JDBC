@@ -20,17 +20,16 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- *
  * @author user
  */
 @Entity
 @Table(name = "client")
 @NamedQueries({
-    @NamedQuery(name = "Client.findAll", query = "SELECT c FROM Client c"),
-    @NamedQuery(name = "Client.findByClientId", query = "SELECT c FROM Client c WHERE c.clientId = :clientId"),
-    @NamedQuery(name = "Client.findByClientTypeId", query = "SELECT c FROM Client c WHERE c.clientTypeId = :clientTypeId"),
-    @NamedQuery(name = "Client.findByClientName", query = "SELECT c FROM Client c WHERE c.clientName = :clientName"),
-    @NamedQuery(name = "Client.findByAddress", query = "SELECT c FROM Client c WHERE c.address = :address")})
+        @NamedQuery(name = "Client.findAll", query = "SELECT c FROM Client c"),
+        @NamedQuery(name = "Client.findByClientId", query = "SELECT c FROM Client c WHERE c.clientId = :clientId"),
+        @NamedQuery(name = "Client.findByClientTypeId", query = "SELECT c FROM Client c WHERE c.clientTypeId = :clientTypeId"),
+        @NamedQuery(name = "Client.findByClientName", query = "SELECT c FROM Client c WHERE c.clientName = :clientName"),
+        @NamedQuery(name = "Client.findByAddress", query = "SELECT c FROM Client c WHERE c.address = :address")})
 public class Client implements Serializable {
     @JoinColumn(name = "clientTypeId", referencedColumnName = "clientTypeId")
     @ManyToOne

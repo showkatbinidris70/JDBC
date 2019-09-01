@@ -8,6 +8,7 @@ package inventory.beans.jpa;
 import inventory.beans.OrderLine;
 import inventory.beans.jpa.exceptions.NonexistentEntityException;
 import inventory.beans.jpa.exceptions.PreexistingEntityException;
+
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -16,11 +17,11 @@ import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+
 import inventory.beans.Oreder;
 import inventory.beans.Stock;
 
 /**
- *
  * @author user
  */
 public class OrderLineJpaController {
@@ -28,6 +29,7 @@ public class OrderLineJpaController {
     public OrderLineJpaController() {
         emf = Persistence.createEntityManagerFactory("InventoryPU");
     }
+
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {

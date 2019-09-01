@@ -12,7 +12,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class DataConnection {
@@ -30,6 +29,6 @@ public class DataConnection {
         } catch (SQLException ex) {
             Logger.getLogger(DataConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
-return conn;
+        return conn;
     }
 }

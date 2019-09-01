@@ -6,14 +6,14 @@
 package com.codderbd.dao;
 
 import com.codderbd.pojo.Summary;
+
 import java.util.List;
 
 /**
- *
  * @author User
  */
 public interface SummaryDao {
-     void createTable();
+    void createTable();
 
     void save(Summary s);
 

@@ -6,7 +6,6 @@
 package com.coderbd.pojo;
 
 /**
- *
  * @author User
  */
 public class Product {
@@ -85,5 +84,5 @@ public class Product {
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
-    
+
 }

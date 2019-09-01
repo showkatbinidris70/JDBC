@@ -13,10 +13,10 @@ public class ReportSummary {
 
     public ReportSummary() {
     }
-    
-   public ReportSummary(int id) {
+
+    public ReportSummary(int id) {
         this.id = id;
-   }
+    }
 
     public ReportSummary(int totalPatient, double doctorFee, double employeeSalary, double totalIncome, double totalSpend, int employeeQty, Patient patient) {
         this.totalPatient = totalPatient;
@@ -106,8 +106,6 @@ public class ReportSummary {
     public String Patient(Patient patient) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-   
-   
+
 
 }

@@ -7,6 +7,7 @@ package com.codderbd.daoImpl;
 
 import com.codderbd.conn.CustomDBConnection;
 import com.codderbd.pojo.ProductCategory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,11 +18,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class ProductCategoryDaoImpl {
-     Connection conn = CustomDBConnection.getDBConnection();
+    Connection conn = CustomDBConnection.getDBConnection();
 
     public void createTable() {
         String sql = "create table IF NOT EXISTS product_category(id int(5) auto_increment primary key, cat_name varchar(20) unique)";

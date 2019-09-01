@@ -6,8 +6,8 @@ import javax.servlet.ServletException;
 
 
 public class ConfirmAction implements Action {
-	public String process(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException {
-		return "/confirmed.html";
-	}
+    public String process(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException {
+        return "/confirmed.html";
+    }
 }

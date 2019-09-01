@@ -8,6 +8,7 @@ package inventory.beans.jpa;
 import inventory.beans.OrderType;
 import inventory.beans.jpa.exceptions.NonexistentEntityException;
 import inventory.beans.jpa.exceptions.PreexistingEntityException;
+
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,7 +19,6 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 /**
- *
  * @author user
  */
 public class OrderTypeJpaController {
@@ -26,6 +26,7 @@ public class OrderTypeJpaController {
     public OrderTypeJpaController() {
         emf = Persistence.createEntityManagerFactory("InventoryPU");
     }
+
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {

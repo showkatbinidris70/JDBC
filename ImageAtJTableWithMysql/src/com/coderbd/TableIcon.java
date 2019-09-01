@@ -14,9 +14,9 @@ public class TableIcon extends JPanel {
         String[] columnNames = {"Picture", "Description"};
         Object[][] data
                 = {
-                    {aboutIcon, "About"},
-                    {addIcon, "Add"},
-                    {copyIcon, "Copy"},};
+                {aboutIcon, "About"},
+                {addIcon, "Add"},
+                {copyIcon, "Copy"},};
 
         DefaultTableModel model = new DefaultTableModel(data, columnNames) {
             //  Returning the Class of each column will allow different

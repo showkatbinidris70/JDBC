@@ -6,7 +6,6 @@
 package com.coderbd.inventory.enums;
 
 /**
- *
  * @author Rajail Islam
  */
 public enum StockAlertPriority {

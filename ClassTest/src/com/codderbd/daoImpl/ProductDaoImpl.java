@@ -8,6 +8,7 @@ package com.codderbd.daoImpl;
 import com.codderbd.conn.CustomDBConnection;
 import com.codderbd.pojo.Product;
 import com.codderbd.pojo.ProductCategory;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,11 +19,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class ProductDaoImpl {
-     Connection conn = CustomDBConnection.getDBConnection();
+    Connection conn = CustomDBConnection.getDBConnection();
 
     public static void main(String[] args) {
         ProductDaoImpl pdi = new ProductDaoImpl();
@@ -106,5 +106,5 @@ public class ProductDaoImpl {
         }
         return list;
     }
-    
+
 }

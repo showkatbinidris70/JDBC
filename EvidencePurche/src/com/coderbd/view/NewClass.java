@@ -6,7 +6,6 @@
 package com.coderbd.view;
 
 /**
- *
  * @author User
  */
 public class NewClass {

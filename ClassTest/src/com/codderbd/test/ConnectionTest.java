@@ -8,7 +8,6 @@ package com.codderbd.test;
 import com.codderbd.conn.CustomDBConnection;
 
 /**
- *
  * @author User
  */
 public class ConnectionTest {

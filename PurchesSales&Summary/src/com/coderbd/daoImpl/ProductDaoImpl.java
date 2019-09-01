@@ -8,6 +8,7 @@ package com.coderbd.daoImpl;
 import com.coderbd.conn.ConnectDB;
 import com.coderbd.dao.ProductDao;
 import com.coderbd.pojo.Product;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,7 +18,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class ProductDaoImpl implements ProductDao {
@@ -61,8 +61,8 @@ public class ProductDaoImpl implements ProductDao {
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, code);
             ResultSet rs = pstm.executeQuery();
-            while(rs.next()){
-            product = new Product(rs.getString(1), rs.getString(2), rs.getInt(Integer.parseInt(3)),Double.parseDouble(rs.getDouble(4)), Double.parseDouble(rs.getDouble(4)));
+            while (rs.next()) {
+                product = new Product(rs.getString(1), rs.getString(2), rs.getInt(Integer.parseInt(3)), Double.parseDouble(rs.getDouble(4)), Double.parseDouble(rs.getDouble(4)));
             }
         } catch (SQLException ex) {
             Logger.getLogger(ProductDaoImpl.class.getName()).log(Level.SEVERE, null, ex);

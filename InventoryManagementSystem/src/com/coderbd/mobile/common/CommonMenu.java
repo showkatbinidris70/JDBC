@@ -7,6 +7,7 @@ import com.coderbd.mobile.view.DashBoard;
 import com.coderbd.mobile.view.LogIn;
 import com.coderbd.mobile.view.Products;
 import com.coderbd.mobile.view.ProductsSalesForm;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -15,7 +16,6 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class CommonMenu {

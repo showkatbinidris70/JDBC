@@ -1,7 +1,6 @@
 package com.coderbd.mobile.domain;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class User {
@@ -13,7 +12,7 @@ public class User {
     private String username;
     private String password;
     private String userType;
-  
+
     public User() {
     }
 
@@ -82,8 +81,5 @@ public class User {
         this.userType = userType;
     }
 
-  
-    
-    
 
 }

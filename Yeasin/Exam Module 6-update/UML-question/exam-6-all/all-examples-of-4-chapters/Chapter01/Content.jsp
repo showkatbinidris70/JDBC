@@ -1,3 +1,3 @@
-<%@ include file='./Header.jsp'%>
+<%@ include file='./Header.jsp' %>
 <p align="center">The Content Goes Here...!!!</p>
-<%@ include file='./Footer.jsp'%>
+<%@ include file='./Footer.jsp' %>

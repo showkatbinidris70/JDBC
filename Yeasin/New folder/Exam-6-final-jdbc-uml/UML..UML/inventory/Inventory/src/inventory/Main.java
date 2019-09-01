@@ -6,7 +6,6 @@
 package inventory;
 
 /**
- *
  * @author user
  */
 public class Main {

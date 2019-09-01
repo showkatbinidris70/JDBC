@@ -6,10 +6,10 @@
 package com.inventory.Dao;
 
 import com.inventory.pojo.Summary;
+
 import java.util.List;
 
 /**
- *
  * @author Md Yasin Arif
  */
 public interface SummaryDao {

@@ -12,13 +12,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author User
  */
 public class CustomDBConnection {
-     static Connection conn = null;
-     
-      public static Connection getDBConnection(String host, String port, String dbname, String username, String password) {
+    static Connection conn = null;
+
+    public static Connection getDBConnection(String host, String port, String dbname, String username, String password) {
         try {
             conn = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + dbname, username, password);
             System.out.println("Connected");
@@ -39,5 +38,5 @@ public class CustomDBConnection {
         }
         return null;
     }
-     
+
 }

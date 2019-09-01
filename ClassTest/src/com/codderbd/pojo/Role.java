@@ -6,7 +6,6 @@
 package com.codderbd.pojo;
 
 /**
- *
  * @author User
  */
 public class Role {
@@ -50,6 +49,5 @@ public class Role {
         return "Role{" + "id=" + id + ", roleName=" + roleName + '}';
     }
 
-    
-    
+
 }

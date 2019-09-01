@@ -6,7 +6,6 @@
 package com.coderbd.mobile.domain;
 
 /**
- *
  * @author User
  */
 public class ProductSales {
@@ -115,6 +114,6 @@ public class ProductSales {
     public void setCustomerMobile(String customerMobile) {
         this.customerMobile = customerMobile;
     }
-    
-    
+
+
 }

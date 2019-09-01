@@ -8,11 +8,10 @@ package com.codderbd.pojo;
 import java.sql.Date;
 
 /**
- *
  * @author User
  */
 public class Product {
-     private int id;
+    private int id;
     private String productName;
     private String productCode;
     private int qty;
@@ -112,7 +111,6 @@ public class Product {
     public void setProductCategory(ProductCategory productCategory) {
         this.productCategory = productCategory;
     }
-    
-    
-    
+
+
 }

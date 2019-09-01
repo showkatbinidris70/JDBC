@@ -19,7 +19,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author rajaul
  */
 public class StudentDaoImpl implements StudentDao {

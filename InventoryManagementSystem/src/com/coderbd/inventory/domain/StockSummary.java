@@ -1,7 +1,6 @@
 package com.coderbd.inventory.domain;
 
 /**
- *
  * @author Rajaul Islam
  */
 public class StockSummary {
@@ -29,7 +28,7 @@ public class StockSummary {
         this.productName = productName;
     }
 
-   
+
     public int getId() {
         return id;
     }

@@ -1,106 +1,102 @@
 <html>
 <script Language="JavaScript">
-function openwindow(href) {
-	window.open(href)
-}
+    function openwindow(href) {
+        window.open(href)
+    }
 
-function ShowHint() {
-	if (parent.up.JJ.indexOf('['+parent.up.II+']')<0)
-	{
-		parent.up.JJ=parent.up.JJ + '[' + parent.up.II + ']';
-	}
-	var cssClassname, bHaveWrongAns;
-	bHaveWrongAns = false;
-	for (i=0; i<parent.side.myChkbx.length; i++)
-	{
-		parent.side.myChkbx(i).disabled = true;
-		if (parent.up.Ans(parent.up.II).indexOf(parent.up.Opti(parent.up.II, i+1))>=0)
-		{
-			if (parent.side.myChkbx(i).checked == true) {
-				cssClassname = "MCGoodAns";
-			}
-			else {
-			  cssClassname = "MCWrong";
-				bHaveWrongAns = true;
-			}
+    function ShowHint() {
+        if (parent.up.JJ.indexOf('[' + parent.up.II + ']') < 0) {
+            parent.up.JJ = parent.up.JJ + '[' + parent.up.II + ']';
+        }
+        var cssClassname, bHaveWrongAns;
+        bHaveWrongAns = false;
+        for (i = 0; i < parent.side.myChkbx.length; i++) {
+            parent.side.myChkbx(i).disabled = true;
+            if (parent.up.Ans(parent.up.II).indexOf(parent.up.Opti(parent.up.II, i + 1)) >= 0) {
+                if (parent.side.myChkbx(i).checked == true) {
+                    cssClassname = "MCGoodAns";
+                }
+                else {
+                    cssClassname = "MCWrong";
+                    bHaveWrongAns = true;
+                }
 
-			parent.side.SELE(i).innerHTML='<span id="' + cssClassname + '">' + parent.up.Opti(parent.up.II,i+1) + '. </span>';
-			parent.side.ENGL(i).innerHTML='<span id="' + cssClassname + '">' + parent.up.Body(parent.up.II,i+1) + '</span>';
-		}
-	}
+                parent.side.SELE(i).innerHTML = '<span id="' + cssClassname + '">' + parent.up.Opti(parent.up.II, i + 1) + '. </span>';
+                parent.side.ENGL(i).innerHTML = '<span id="' + cssClassname + '">' + parent.up.Body(parent.up.II, i + 1) + '</span>';
+            }
+        }
 
-	if (top.hid.learnmode == 0) {
-		if (bHaveWrongAns) {
-			parent.down.AnsResultTxt.innerHTML=':-(';
-			parent.down.AnsResultTxt.className='Red';
-			parent.down.AnsResultImg.setAttribute('src', '../images/LedRed.gif');
-		} else {
-			parent.down.AnsResultTxt.innerHTML=':-)';
-			parent.down.AnsResultTxt.className='Green';
-			parent.down.AnsResultImg.setAttribute('src', '../images/LedGreen.gif');
-		}
-	}
+        if (top.hid.learnmode == 0) {
+            if (bHaveWrongAns) {
+                parent.down.AnsResultTxt.innerHTML = ':-(';
+                parent.down.AnsResultTxt.className = 'Red';
+                parent.down.AnsResultImg.setAttribute('src', '../images/LedRed.gif');
+            } else {
+                parent.down.AnsResultTxt.innerHTML = ':-)';
+                parent.down.AnsResultTxt.className = 'Green';
+                parent.down.AnsResultImg.setAttribute('src', '../images/LedGreen.gif');
+            }
+        }
 
-	if (parent.up.WRIGHTS + parent.up.WRONGS > 0) {
-		parent.up.PercentError = parseInt(100 * parent.up.WRONGS / (parent.up.WRIGHTS + parent.up.WRONGS)) ;
-		parent.down.PercentError.innerHTML = parent.up.PercentError + '%';
-	}
-	parent.down.TotalQuesSofar.innerHTML = parent.up.WRIGHTS + parent.up.WRONGS;
+        if (parent.up.WRIGHTS + parent.up.WRONGS > 0) {
+            parent.up.PercentError = parseInt(100 * parent.up.WRONGS / (parent.up.WRIGHTS + parent.up.WRONGS));
+            parent.down.PercentError.innerHTML = parent.up.PercentError + '%';
+        }
+        parent.down.TotalQuesSofar.innerHTML = parent.up.WRIGHTS + parent.up.WRONGS;
 
-	parent.down.HintAns.innerHTML = parent.up.Ans(parent.up.II);
+        parent.down.HintAns.innerHTML = parent.up.Ans(parent.up.II);
 
-  if (parent.up.randomans == 0 && parent.up.Desc(parent.up.II) != "")
-	{
-	  parent.side.COMM.innerHTML = parent.side.COMM.innerHTML + '<div class="Explanation">' + parent.up.Desc(parent.up.II) + '</div>' ;
-	}
-}
+        if (parent.up.randomans == 0 && parent.up.Desc(parent.up.II) != "") {
+            parent.side.COMM.innerHTML = parent.side.COMM.innerHTML + '<div class="Explanation">' + parent.up.Desc(parent.up.II) + '</div>';
+        }
+    }
 
-var intHours, intMinutes, intSeconds;
-intHours = 0;
-intMinutes = 0;
-intSeconds = 0;
+    var intHours, intMinutes, intSeconds;
+    intHours = 0;
+    intMinutes = 0;
+    intSeconds = 0;
 
-function tick() {
-  var hours, minutes; //, seconds;
-  var today;
-  today = new Date();
-  intSeconds++;
-  if (intSeconds>=60) {
-	intSeconds -= 60;
-	intMinutes++;
-  }
-  if (intMinutes>=60) {
-	intMinutes -= 60;
-	intHours++;
-  }
-  if (intHours < 10) {
-     hours = "0"+intHours+":";
-  } else {
-     hours = intHours+":";
-  }
-  if (intMinutes < 10) {
-     minutes = "0"+intMinutes;
-  } else {
-     minutes = intMinutes;
-  }
-/*
-  //Removed Feb 08,2003 by Synvox: Seconds is annoying
-  if (intSeconds < 10) {
-     seconds = "0"+intSeconds+" ";
-  } else {
-     seconds = intSeconds+" ";
-  }
-*/
+    function tick() {
+        var hours, minutes; //, seconds;
+        var today;
+        today = new Date();
+        intSeconds++;
+        if (intSeconds >= 60) {
+            intSeconds -= 60;
+            intMinutes++;
+        }
+        if (intMinutes >= 60) {
+            intMinutes -= 60;
+            intHours++;
+        }
+        if (intHours < 10) {
+            hours = "0" + intHours + ":";
+        } else {
+            hours = intHours + ":";
+        }
+        if (intMinutes < 10) {
+            minutes = "0" + intMinutes;
+        } else {
+            minutes = intMinutes;
+        }
+        /*
+          //Removed Feb 08,2003 by Synvox: Seconds is annoying
+          if (intSeconds < 10) {
+             seconds = "0"+intSeconds+" ";
+          } else {
+             seconds = intSeconds+" ";
+          }
+        */
 
-  var timeString = hours + minutes; //+seconds;
+        var timeString = hours + minutes; //+seconds;
 
-  parent.topp.ElapsedTime.innerHTML = timeString;
+        parent.topp.ElapsedTime.innerHTML = timeString;
 
-  window.setTimeout("tick();", 1000);
-}
+        window.setTimeout("tick();", 1000);
+    }
 </script>
 
-<script Language="VBScript" >
+<script Language="VBScript">
 Dim Subject(400)
 Dim Body(400,15)
 Dim Opti(400,15)
@@ -481,7 +477,7 @@ Sub Review()
 		intHI = intHI + 1
 	End If
 
-	top.document.title="ÜBERSICHT - " & Left(top.hid.AA, Len(top.hid.AA)-4)
+	top.document.title="ï¿½BERSICHT - " & Left(top.hid.AA, Len(top.hid.AA)-4)
 
 	document.write "<html><head><style type=""text/css""> BODY,TR,TD,TH,P,A,BUTTON {font-family:Verdana,Arial; font-size:11px;} TH {font-weight:normal; text-align:left; color:#FFFFFF;} .RealQNum {font-size:9px; color:#A0A0A0;} .GoodAns {color:#008000;} .WrongAns {color:#FF0000;} .Gray {color:#C0C0C0; } A {color: #0040A0; font-weight:bold; text-decoration:none;} A:hover {color:#FFFFFF; background-color:#FF0060;} Button {font-family:Tahoma; font-size:11px; font-weight:bold; height:25px; width:130px; cursor:hand}</style></head>"
 	document.write "<body background='../images/bg2.gif'><center><table border='5' cellspacing='0' cellpadding='5' bgcolor='#FFFFFF'><tr valign='top'>"
@@ -583,7 +579,7 @@ Sub FirstPage()
 		nbRows = nbRows + 1
 	End If
 
-	top.document.title = "Hauptmenü: Exam Selection"
+	top.document.title = "Hauptmenï¿½: Exam Selection"
 
 	document.write "<html><head><style type='text/css'> BODY,TR,TD,TH,P,A {font-family:Verdana,Arial; font-size:12px; font-weight: bold} A {color:#0040A0; cursor:hand; text-decoration:none; padding:2px; height:18px; border-style:solid; border-width:1px; border-color:#FFFFFF;} A:hover {color:#0040A0; background-color:#E0F0FF; border-color:#0040A0;} TD.White {color:#FFFFFF;} TD.V {font-size:11px; font-weight:normal;} Button {font-family:Tahoma; font-size:11px; font-weight:bold; height:24px; width:100px; cursor:hand}</style></head>"
 	document.write "<body background='../images/bg1.gif'><br/><center><table><tr><td><img src='../images/logo.gif' width='362' height='53' border='0' ALT='T r a n D u m p e r'></td></tr><tr><td align='right' class='V'>~German Edition~ Version 3.0 de</td></tr></table></center><br/>"
@@ -672,7 +668,7 @@ Sub SecondPage()
 	"<td style='width=140px'><input type='checkbox' name='randomquest' accesskey='Z' onClick=""if (randomquest.checked==true) { top.hid.randomquest=1} else { top.hid.randomquest=0}""><u>Z</u>uf&auml;llige Fragen</td>" &_
 	"<td><input type='checkbox' name='randomans'   accesskey='r' onClick=""if (randomans.checked==true)   { top.hid.randomans=1}   else { top.hid.randomans=0}  "">Zuf&auml;llige Antworten<u>r</u>eihenfolge</td></tr>" &_
 	"<tr><td colspan='5'>" & MEMO & "</td></tr>" &_
-	"<tr><td colspan='5' style='color:#DDDDDD;'><br/>W&auml;hle eine <u>P</u>rüfung:</td></tr>" &_
+	"<tr><td colspan='5' style='color:#DDDDDD;'><br/>W&auml;hle eine <u>P</u>rï¿½fung:</td></tr>" &_
 	"<tr><td colspan='5'><select class='myChoice' name='myChoice' size='6' accesskey='P' onDblClick=""document.location.href='Trandumper.html?frame'""" &_
 	"  onClick=""if((myChoice.selectedIndex)<0) return(0); if (myChoice(myChoice.selectedIndex).value == '') btnStart.disabled = true; if(myChoice(myChoice.selectedIndex).value != '') btnStart.disabled = false; area.value=top.main.MEMO(myChoice.selectedIndex).value; top.hid.AA=myChoice(myChoice.selectedIndex).value"">" & FILES & "</select></td></tr>" &_
 	"<tr><td colspan='5' style='color:#DDDDDD;'><br/>Beschreibung:</td></tr>" &_
@@ -690,12 +686,12 @@ Sub HomePage()
 	if top.hid.randomquest = 0 then
 		sQuesOrderMode = "normal"
 	else
-		sQuesOrderMode = "zufällig"
+		sQuesOrderMode = "zufï¿½llig"
 	end if
 	if top.hid.randomans = 0 then
 		sMCOrderMode = "normal"
 	else
-		sMCOrderMode = "zufällig"
+		sMCOrderMode = "zufï¿½llig"
 	end if
 
 	top.document.title="TranDumper v2.30 de"
@@ -737,12 +733,12 @@ Sub WriteTopp()
 	if top.hid.randomquest = 0 then
 		sQuesOrderMode = "normal"
 	else
-		sQuesOrderMode = "zufällig"
+		sQuesOrderMode = "zufï¿½llig"
 	end if
 	if top.hid.randomans = 0 then
 		sMCOrderMode = "normal"
 	else
-		sMCOrderMode = "zufällig"
+		sMCOrderMode = "zufï¿½llig"
 	end if
 
 	TOPP = "<html><head><style type=""text/css"">BODY {margin-left:22px; margin-right:23px;} BODY,TD {font-family:Verdana,Arial; font-size:12px;} .Blue {color:#0000FF;} </style></head>" &_
@@ -910,7 +906,7 @@ Sub WriteDown()
 		"<td><button name='prev' accesskey='Z' onClick=""parent.side.location.href='Trandumper.html?2'"" disabled>&lt;&lt;&nbsp;<u>Z</u>ur&uuml;ck</button></td>" &_
 		"<td><button name='nextt' accesskey='W' onClick=""parent.side.location.href='Trandumper.html?1'"" disabled>&nbsp;&nbsp;&nbsp;<u>W</u>eiter&nbsp;&gt;&gt;&nbsp;</button></td>" &_
 		"<td><button name=answ accesskey='A' onClick=""if(parent.up.JJ.indexOf('['+parent.up.II+']')<0){ parent.up.JJ=parent.up.JJ + '[' + parent.up.II + ']'; parent.up.WRONGS= parent.up.WRONGS + 1; 	parent.down.wrong.innerHTML=parent.up.WRONGS; } parent.up.ShowHint();"" disabled><u>A</u>ntwort</button></td>" &_
-		"<td><button disabled name='review' accesskey='Ü' onClick=""parent.side.location.href='Trandumper.html?review'""><u>&Uuml;</u>bersicht</button></td>" &_
+		"<td><button disabled name='review' accesskey='ï¿½' onClick=""parent.side.location.href='Trandumper.html?review'""><u>&Uuml;</u>bersicht</button></td>" &_
 		"<td align='right'><button name='exitt' accesskey='E' onClick=""if(confirm('Pr&uuml;fung wirklich beenden?')) { top.hid.learnmode=0; top.hid.randomquest=0; top.hid.randomans=0; parent.location.href='Trandumper.html?second';}""><u>E</u>nde</button></td>" &_
 		"</tr></table></body></html>"
 End Sub
@@ -944,7 +940,7 @@ Sub SubSetQues(sSubsetCount)
 	If isNumeric(sSubsetCount) then
 		newMM = CInt(sSubsetCount)
 		If newMM < 1 or newMM > parent.up.MM then
-			MsgBox "Ungültiger Zahlenwert für Fragenanzahl eingegeben. Die Standardanzahl wird verwendet!"
+			MsgBox "Ungï¿½ltiger Zahlenwert fï¿½r Fragenanzahl eingegeben. Die Standardanzahl wird verwendet!"
 		else
 			parent.up.MM = newMM
 		End If
@@ -982,7 +978,7 @@ Sub SaveWrong()
 		SaveType = "gespeichert !"
 	Else
 		Set a = top.hid.filesys.OpenTextFile(top.hid.FOLDER & parent.side.WRONG.value, ForAppending,TristateFalse)
-		SaveType = "angehängt !"
+		SaveType = "angehï¿½ngt !"
 	End If
 	For i = 1 To parent.up.MM
 		If (InStr(parent.up.JJ, "[" & i & "]") > 0) Then
@@ -1012,5 +1008,6 @@ Sub SaveWrong()
 	a.Close
 	MsgBox parent.side.WRONG.value & " wurde " & SaveType
 End Sub
+
 </script>
 </html>

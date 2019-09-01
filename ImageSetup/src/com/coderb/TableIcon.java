@@ -8,9 +8,8 @@ package com.coderb;
 import javax.swing.JPanel;
 
 /**
- *
  * @author User
  */
-public class TableIcon extends JPanel{
-    
+public class TableIcon extends JPanel {
+
 }
